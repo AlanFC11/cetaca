@@ -8,5 +8,11 @@ target 'cetacproject' do
 pod 'SideMenu'
 pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
+target 'cetacprojectTests' do 
+
+inherit! :search_paths
+pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
+end
 
 end

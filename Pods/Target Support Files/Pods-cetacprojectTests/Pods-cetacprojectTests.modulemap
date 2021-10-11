@@ -1,0 +1,6 @@
+framework module Pods_cetacprojectTests {
+  umbrella header "Pods-cetacprojectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

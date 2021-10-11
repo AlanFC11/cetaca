@@ -14,26 +14,34 @@ class Login{
     
     let db = Firestore.firestore()
     
-    func updateName(id: String, name: String){
+    func updateName(id: String, name: String) -> Int{
+        var status: Int = 1
         db.collection("Cuentas").document(id).setData([ "nombre": name], merge: true)
         { err in
             if let err = err {
                 print("Error writing document: \(err)")
+                status = 0
             } else {
+                status = 1
                 print("Document successfully written!")
             }
         }
+        return status
     }
     
-    func updatePassword(id: String, password: String){
+    func updatePassword(id: String, password: String) -> Int{
+        var status: Int = 1
         db.collection("Cuentas").document(id).setData([ "password": password], merge: true)
         { err in
             if let err = err {
                 print("Error writing document: \(err)")
+                status = 0
             } else {
                 print("Document successfully written!")
+                status = 1
             }
         }
+        return status
     }
     
     func login(mail:String, completion: @escaping (Result<CuentasInfo, Error>) -> Void){
@@ -62,27 +70,25 @@ class Login{
         }
  */
     }
-    
-    func fetchServicios(completion: @escaping (Result<CuentasInfo, Error>) -> Void){
-        
-//        let servicios = [Servicio(nombre: "Uno", desc: "Desc Uno")]
-        var cuentasInfo = [Cuentas]()
-        
-        /*
-        let usersCollection = db.collection("Usuario_Info")
-        db.collection("Usuario_Info").getDocuments() { (querySnapshot, err) in
+    func deleteUser(id: String) -> Int{
+        var status:Int = 1
+        db.collection("Cuentas").document(id).delete() { err in
             if let err = err {
-                print("Error getting documents: \(err)")
+                print("Error removing document: \(err)")
+                status = 0
             } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                }
+                print("Document successfully removed!")
+                status = 1
             }
         }
-        */
+        return status
+
+    }
+    func fetchSubadmins(completion: @escaping (Result<CuentasInfo, Error>) -> Void){
+
+        var cuentasInfo = [Cuentas]()
         
-        
-        db.collection("Cuentas").getDocuments() { (querySnapshot, err) in
+        db.collection("Cuentas").whereField("permisos", isEqualTo: 2) .getDocuments(){ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
                 completion(.failure(err))

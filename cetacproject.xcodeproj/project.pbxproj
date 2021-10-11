@@ -62,10 +62,13 @@
 		09619B08270EA2DF004D0683 /* typeOfMenu.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09619B07270EA2DF004D0683 /* typeOfMenu.txt */; };
 		09619B0B270EA2FD004D0683 /* selectedOptionIndex.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09619B0A270EA2FD004D0683 /* selectedOptionIndex.txt */; };
 		0976066227036F9300E8378D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976066127036F9300E8378D /* PageViewController.swift */; };
+		0976C908271396AC009615DA /* ActualizacionBorradoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976C907271396AC009615DA /* ActualizacionBorradoTests.swift */; };
 		09AB97C5270D3A4E00B036D9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB97C4270D3A4E00B036D9 /* Login.swift */; };
 		09AB97C9270D47AC00B036D9 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB97C8270D47AC00B036D9 /* LoginModels.swift */; };
 		09E648DA271090790032E486 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E648D9271090790032E486 /* UserTableViewController.swift */; };
 		09E648DF2710D0D80032E486 /* TableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E648DE2710D0D80032E486 /* TableTableViewController.swift */; };
+		09E648E22710E4790032E486 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E648E12710E4790032E486 /* EditInfoViewController.swift */; };
+		1557426BFD5BBBC844876CA5 /* Pods_cetacprojectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EADB4D8ABBAC553975F788 /* Pods_cetacprojectTests.framework */; };
 		28263A32FCBADFCC8A2F4597 /* Pods_cetacproject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C768D80B4926388B081050F0 /* Pods_cetacproject.framework */; };
 		39F9042E26E28C650008FA80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F9042D26E28C650008FA80 /* AppDelegate.swift */; };
 		39F9043026E28C650008FA80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F9042F26E28C650008FA80 /* SceneDelegate.swift */; };
@@ -83,6 +86,16 @@
 		39F9045226E299CC0008FA80 /* QuienesSomosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F9045126E299CC0008FA80 /* QuienesSomosViewController.swift */; };
 		4D4BB04A270B55FA0001B87A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4BB049270B55FA0001B87A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0976C8D8271385D4009615DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39F9042226E28C650008FA80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39F9042926E28C650008FA80;
+			remoteInfo = cetacproject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		09227162270F3E0D009A7AB7 /* password.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = password.txt; sourceTree = "<group>"; };
@@ -140,10 +153,15 @@
 		09619B07270EA2DF004D0683 /* typeOfMenu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = typeOfMenu.txt; sourceTree = "<group>"; };
 		09619B0A270EA2FD004D0683 /* selectedOptionIndex.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = selectedOptionIndex.txt; sourceTree = "<group>"; };
 		0976066127036F9300E8378D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		0976C8D3271385D4009615DA /* cetacprojectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cetacprojectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0976C8D7271385D4009615DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0976C907271396AC009615DA /* ActualizacionBorradoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualizacionBorradoTests.swift; sourceTree = "<group>"; };
 		09AB97C4270D3A4E00B036D9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		09AB97C8270D47AC00B036D9 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		09E648D9271090790032E486 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		09E648DE2710D0D80032E486 /* TableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTableViewController.swift; sourceTree = "<group>"; };
+		09E648E12710E4790032E486 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		156CC3C3A10873504B810BD1 /* Pods-cetacprojectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacprojectTests.release.xcconfig"; path = "Target Support Files/Pods-cetacprojectTests/Pods-cetacprojectTests.release.xcconfig"; sourceTree = "<group>"; };
 		1DFD3D9081367E0AE277AEA4 /* Pods-cetacproject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacproject.debug.xcconfig"; path = "Target Support Files/Pods-cetacproject/Pods-cetacproject.debug.xcconfig"; sourceTree = "<group>"; };
 		39F9042A26E28C650008FA80 /* cetacproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cetacproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F9042D26E28C650008FA80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,11 +180,21 @@
 		39F9044F26E299950008FA80 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		39F9045126E299CC0008FA80 /* QuienesSomosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuienesSomosViewController.swift; sourceTree = "<group>"; };
 		4D4BB049270B55FA0001B87A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7CC84C5BC4B8366EE0C17F3C /* Pods-cetacprojectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacprojectTests.debug.xcconfig"; path = "Target Support Files/Pods-cetacprojectTests/Pods-cetacprojectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		868DEA683EB4A2383D90970C /* Pods-cetacproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacproject.release.xcconfig"; path = "Target Support Files/Pods-cetacproject/Pods-cetacproject.release.xcconfig"; sourceTree = "<group>"; };
 		C768D80B4926388B081050F0 /* Pods_cetacproject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cetacproject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5EADB4D8ABBAC553975F788 /* Pods_cetacprojectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cetacprojectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0976C8D0271385D4009615DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1557426BFD5BBBC844876CA5 /* Pods_cetacprojectTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		39F9042726E28C650008FA80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,6 +219,15 @@
 			path = LogInfo;
 			sourceTree = "<group>";
 		};
+		0976C8D4271385D4009615DA /* cetacprojectTests */ = {
+			isa = PBXGroup;
+			children = (
+				0976C907271396AC009615DA /* ActualizacionBorradoTests.swift */,
+				0976C8D7271385D4009615DA /* Info.plist */,
+			);
+			path = cetacprojectTests;
+			sourceTree = "<group>";
+		};
 		09AB97CB270D47B800B036D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				C768D80B4926388B081050F0 /* Pods_cetacproject.framework */,
+				F5EADB4D8ABBAC553975F788 /* Pods_cetacprojectTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,6 +249,7 @@
 		39F9042126E28C650008FA80 = {
 			isa = PBXGroup;
 			children = (
+				0976C8D4271385D4009615DA /* cetacprojectTests */,
 				39F9042C26E28C650008FA80 /* cetacproject */,
 				39F9042B26E28C650008FA80 /* Products */,
 				7AAC38CC67A5D6AB28E63BD0 /* Pods */,
@@ -222,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				39F9042A26E28C650008FA80 /* cetacproject.app */,
+				0976C8D3271385D4009615DA /* cetacprojectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,6 +296,7 @@
 				0922716B270F3E8A009A7AB7 /* UpdateInfoViewController.swift */,
 				09E648D9271090790032E486 /* UserTableViewController.swift */,
 				09E648DE2710D0D80032E486 /* TableTableViewController.swift */,
+				09E648E12710E4790032E486 /* EditInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -323,6 +364,8 @@
 			children = (
 				1DFD3D9081367E0AE277AEA4 /* Pods-cetacproject.debug.xcconfig */,
 				868DEA683EB4A2383D90970C /* Pods-cetacproject.release.xcconfig */,
+				7CC84C5BC4B8366EE0C17F3C /* Pods-cetacprojectTests.debug.xcconfig */,
+				156CC3C3A10873504B810BD1 /* Pods-cetacprojectTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -330,6 +373,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0976C8D2271385D4009615DA /* cetacprojectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0976C8DC271385D4009615DA /* Build configuration list for PBXNativeTarget "cetacprojectTests" */;
+			buildPhases = (
+				62924A0ABAEA4F04C00E96D1 /* [CP] Check Pods Manifest.lock */,
+				0976C8CF271385D4009615DA /* Sources */,
+				0976C8D0271385D4009615DA /* Frameworks */,
+				0976C8D1271385D4009615DA /* Resources */,
+				984E2F1A70D762CB17AFD123 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0976C8D9271385D4009615DA /* PBXTargetDependency */,
+			);
+			name = cetacprojectTests;
+			productName = cetacprojectTests;
+			productReference = 0976C8D3271385D4009615DA /* cetacprojectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		39F9042926E28C650008FA80 /* cetacproject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39F9043E26E28C660008FA80 /* Build configuration list for PBXNativeTarget "cetacproject" */;
@@ -355,10 +418,14 @@
 		39F9042226E28C650008FA80 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = CDT307;
 				TargetAttributes = {
+					0976C8D2271385D4009615DA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 39F9042926E28C650008FA80;
+					};
 					39F9042926E28C650008FA80 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -378,11 +445,19 @@
 			projectRoot = "";
 			targets = (
 				39F9042926E28C650008FA80 /* cetacproject */,
+				0976C8D2271385D4009615DA /* cetacprojectTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0976C8D1271385D4009615DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		39F9042826E28C650008FA80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,6 +551,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		62924A0ABAEA4F04C00E96D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cetacprojectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		984E2F1A70D762CB17AFD123 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cetacprojectTests/Pods-cetacprojectTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cetacprojectTests/Pods-cetacprojectTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cetacprojectTests/Pods-cetacprojectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B241DFBDD61D830A4538DD4E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,6 +610,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0976C8CF271385D4009615DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0976C908271396AC009615DA /* ActualizacionBorradoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		39F9042626E28C650008FA80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,6 +630,7 @@
 				0922716C270F3E8A009A7AB7 /* UpdateInfoViewController.swift in Sources */,
 				09E648DF2710D0D80032E486 /* TableTableViewController.swift in Sources */,
 				39F9042E26E28C650008FA80 /* AppDelegate.swift in Sources */,
+				09E648E22710E4790032E486 /* EditInfoViewController.swift in Sources */,
 				09AB97C9270D47AC00B036D9 /* LoginModels.swift in Sources */,
 				39F9043026E28C650008FA80 /* SceneDelegate.swift in Sources */,
 				09AB97C5270D3A4E00B036D9 /* Login.swift in Sources */,
@@ -517,6 +640,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0976C8D9271385D4009615DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39F9042926E28C650008FA80 /* cetacproject */;
+			targetProxy = 0976C8D8271385D4009615DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		39F9043326E28C650008FA80 /* Main.storyboard */ = {
@@ -538,6 +669,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0976C8DA271385D4009615DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC84C5BC4B8366EE0C17F3C /* Pods-cetacprojectTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = cetacprojectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = itesm.A01652453.cetacprojectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cetacproject.app/cetacproject";
+			};
+			name = Debug;
+		};
+		0976C8DB271385D4009615DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 156CC3C3A10873504B810BD1 /* Pods-cetacprojectTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = cetacprojectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = itesm.A01652453.cetacprojectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cetacproject.app/cetacproject";
+			};
+			name = Release;
+		};
 		39F9043C26E28C660008FA80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -697,6 +870,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0976C8DC271385D4009615DA /* Build configuration list for PBXNativeTarget "cetacprojectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0976C8DA271385D4009615DA /* Debug */,
+				0976C8DB271385D4009615DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		39F9042526E28C650008FA80 /* Build configuration list for PBXProject "cetacproject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
