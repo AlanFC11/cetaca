@@ -84,7 +84,12 @@
 		39F9044E26E293D40008FA80 /* feliz.png in Resources */ = {isa = PBXBuildFile; fileRef = 39F9044D26E293D40008FA80 /* feliz.png */; };
 		39F9045026E299950008FA80 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F9044F26E299950008FA80 /* MainMenuViewController.swift */; };
 		39F9045226E299CC0008FA80 /* QuienesSomosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F9045126E299CC0008FA80 /* QuienesSomosViewController.swift */; };
+		4D0A6DB9271670930016562A /* nuevafoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A6DB8271670930016562A /* nuevafoto.jpg */; };
+		4D0A6DBF271671820016562A /* la buena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A6DBE271671820016562A /* la buena.jpg */; };
+		4D0A6DC3271675A20016562A /* mindfulnesslabuena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A6DC2271675A10016562A /* mindfulnesslabuena.jpg */; };
 		4D4BB04A270B55FA0001B87A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4BB049270B55FA0001B87A /* GoogleService-Info.plist */; };
+		4D89393B271528B000011F15 /* ModernSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D89393A271528B000011F15 /* ModernSans-Light.otf */; };
+		4D89393F271528C600011F15 /* modern M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D89393E271528C600011F15 /* modern M.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,7 +184,12 @@
 		39F9044D26E293D40008FA80 /* feliz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feliz.png; sourceTree = "<group>"; };
 		39F9044F26E299950008FA80 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		39F9045126E299CC0008FA80 /* QuienesSomosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuienesSomosViewController.swift; sourceTree = "<group>"; };
+		4D0A6DB8271670930016562A /* nuevafoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nuevafoto.jpg; path = ../../../../../Downloads/nuevafoto.jpg; sourceTree = "<group>"; };
+		4D0A6DBE271671820016562A /* la buena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "la buena.jpg"; sourceTree = "<group>"; };
+		4D0A6DC2271675A10016562A /* mindfulnesslabuena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mindfulnesslabuena.jpg; sourceTree = "<group>"; };
 		4D4BB049270B55FA0001B87A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D89393A271528B000011F15 /* ModernSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ModernSans-Light.otf"; sourceTree = "<group>"; };
+		4D89393E271528C600011F15 /* modern M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "modern M.ttf"; sourceTree = "<group>"; };
 		7CC84C5BC4B8366EE0C17F3C /* Pods-cetacprojectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacprojectTests.debug.xcconfig"; path = "Target Support Files/Pods-cetacprojectTests/Pods-cetacprojectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		868DEA683EB4A2383D90970C /* Pods-cetacproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacproject.release.xcconfig"; path = "Target Support Files/Pods-cetacproject/Pods-cetacproject.release.xcconfig"; sourceTree = "<group>"; };
 		C768D80B4926388B081050F0 /* Pods_cetacproject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cetacproject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +279,7 @@
 		39F9042C26E28C650008FA80 /* cetacproject */ = {
 			isa = PBXGroup;
 			children = (
+				4D8939392715283200011F15 /* fonts */,
 				09227174270F5119009A7AB7 /* LogInfo */,
 				09AB97CB270D47B800B036D9 /* Models */,
 				39F9044226E28D1B0008FA80 /* Images */,
@@ -304,6 +315,9 @@
 		39F9044226E28D1B0008FA80 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4D0A6DBE271671820016562A /* la buena.jpg */,
+				4D0A6DB8271670930016562A /* nuevafoto.jpg */,
+				4D0A6DC2271675A10016562A /* mindfulnesslabuena.jpg */,
 				09477EE326E4AC4C00982928 /* mapapa.png */,
 				09477EDA26E4ABFE00982928 /* user1.png */,
 				09477ED926E4ABFE00982928 /* users.png */,
@@ -357,6 +371,15 @@
 				39F9044626E291D20008FA80 /* alternative.jpeg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		4D8939392715283200011F15 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4D89393E271528C600011F15 /* modern M.ttf */,
+				4D89393A271528B000011F15 /* ModernSans-Light.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		7AAC38CC67A5D6AB28E63BD0 /* Pods */ = {
@@ -465,6 +488,7 @@
 				09477EB226E4A3EA00982928 /* loc.jpg in Resources */,
 				09477EA726E4A3EA00982928 /* angeloterapia.jpg in Resources */,
 				39F9043A26E28C660008FA80 /* LaunchScreen.storyboard in Resources */,
+				4D89393F271528C600011F15 /* modern M.ttf in Resources */,
 				09477EDE26E4ABFF00982928 /* users.png in Resources */,
 				09477EB526E4A3EA00982928 /* mindfulnes.png in Resources */,
 				09477EA026E4A3EA00982928 /* obj1.jpg in Resources */,
@@ -500,6 +524,7 @@
 				09477EB026E4A3EA00982928 /* flores de bach.png in Resources */,
 				09477EBC26E4A3EA00982928 /* flores.png in Resources */,
 				39F9043526E28C650008FA80 /* Main.storyboard in Resources */,
+				4D89393B271528B000011F15 /* ModernSans-Light.otf in Resources */,
 				39F9044B26E291E10008FA80 /* holistica.jpg in Resources */,
 				09227170270F4E36009A7AB7 /* id.txt in Resources */,
 				09477EA826E4A3EA00982928 /* tanatologo.jpg in Resources */,
@@ -517,11 +542,14 @@
 				09477EDF26E4ABFF00982928 /* user1.png in Resources */,
 				09477ED426E4ABE000982928 /* reports.png in Resources */,
 				09477EBB26E4A3EA00982928 /* Terapia-Individual-en-DF.jpg in Resources */,
+				4D0A6DC3271675A20016562A /* mindfulnesslabuena.jpg in Resources */,
 				09477EA326E4A3EA00982928 /* location.png in Resources */,
+				4D0A6DBF271671820016562A /* la buena.jpg in Resources */,
 				09477EA626E4A3EA00982928 /* holisticos.jpg in Resources */,
 				09477EDD26E4ABFF00982928 /* whats.png in Resources */,
 				4D4BB04A270B55FA0001B87A /* GoogleService-Info.plist in Resources */,
 				09477ECC26E4ABD300982928 /* medkit.png in Resources */,
+				4D0A6DB9271670930016562A /* nuevafoto.jpg in Resources */,
 				39F9044826E291D20008FA80 /* alternative.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
