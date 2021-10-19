@@ -1,25 +1,27 @@
 //
-//  ChartsViewController.swift
+//  CreateReportViewController.swift
 //  cetacproject
 //
-//  Created by user193544 on 10/17/21.
+//  Created by user194050 on 10/17/21.
 //  Copyright © 2021 CDT307. All rights reserved.
 //
 
+
 import UIKit
 import Firebase
+import Foundation
 import Charts
 import TinyConstraints
 
-class ChartsViewController: UIViewController {
-    
+class CreateReportViewController: UIViewController, ChartViewDelegate {
+    let db = Firestore.firestore()
     var typeOfChart = ""
     
     var database = Login()
     var sessionsData = [Sesion]()
     @IBOutlet weak var chartView: UIView!
     
-    lazy var pieChart: PieChartView = {
+    lazy var pieChartServicios: PieChartView = {
         let pieChartView = PieChartView()
         return pieChartView
     }()
@@ -38,8 +40,36 @@ class ChartsViewController: UIViewController {
        let view = LineChartView()
         return view
     }()
+    
+    
+    lazy var pieChart: PieChartView = {
+        var pieChartView = PieChartView()
+        return pieChartView
+    }()
+    
+    var usuarios = [Encuadre]()
+    var tanatologos = [String: User]()
+    var sesiones = [Session]()
+    
+    var tipodeGraph = 0
+    
+    var paraMostrarInicio: String?
+    var paraMostrarFinal: String?
+    var fechaInicio:String?
+    var fechaFinal:String?
+    
+    @IBOutlet weak var vistaGrafica: UIView!
+    
+    @IBOutlet weak var titulo: UILabel!
+    @IBOutlet weak var fechaI: UILabel!
+    @IBOutlet weak var fechaF: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fechaI.text = self.paraMostrarInicio ?? ""
+        fechaF.text = self.paraMostrarFinal ?? ""
+        
+        
         database.fetchSessions{ (result) in
             switch result{
             case .success(let sesiones):self.pieChartUpdate(with: sesiones)
@@ -47,7 +77,71 @@ class ChartsViewController: UIViewController {
             }
             
         }
-        if typeOfChart == "CuotaGlobal"{
+
+        
+        if(typeOfChart == "genero"){
+            pieChart.delegate = self
+            titulo.text = "Usuarios por sexo"
+            //vistaGrafica.addSubview(pieChart)
+            chartView.addSubview(pieChart)
+            //pieChart.center(in: vistaGrafica)
+            pieChart.center(in: chartView)
+            //pieChart.width(to: vistaGrafica)
+            pieChart.width(to: chartView)
+            //pieChart.heightToWidth(of: vistaGrafica)
+            pieChart.heightToWidth(of: chartView)
+            
+            db.collection("Sesion").getDocuments(){ (QuerySnapshot, err) in
+                if let err = err {
+                    print("Error en base de datos")
+                } else {
+                    for document in QuerySnapshot!.documents{
+                        var s = Session(aDoc: document)
+                        self.sesiones.append(s)
+                    }
+                    print("Se agregaron las sesiones")
+                    print(self.sesiones.count)
+                    self.obtenerUsuarios()
+                }
+            }
+        }
+        else if (typeOfChart == "userTanat")
+        {
+            pieChart.delegate = self
+            titulo.text = "Usuarios por tanatólogo"
+            chartView.addSubview(pieChart)
+            pieChart.center(in: chartView)
+            pieChart.width(to: chartView)
+            pieChart.heightToWidth(of: chartView)
+            
+            db.collection("Cuentas").getDocuments(){ (QuerySnapshot, err) in
+                if let err = err {
+                    print("Error en base de datos")
+                } else {
+                    for document in QuerySnapshot!.documents{
+                        var s = User(aDoc: document)
+                        if(s.permisos == 1){
+                            self.tanatologos[document.documentID] = s
+                        }
+                    }
+                    print("Se agregaron los tanatologos")
+                    print(self.tanatologos.count)
+                    self.db.collection("Sesion").getDocuments(){ (QuerySnapshot, err) in
+                        if let err = err {
+                            print("Error en base de datos")
+                        } else {
+                            for document in QuerySnapshot!.documents{
+                                var s = Session(aDoc: document)
+                                self.sesiones.append(s)
+                            }
+                            print("Se agregaron las sesiones")
+                            print(self.sesiones.count)
+                        }
+                    }
+                    self.obtenerUsuariosTanatologo()
+                }
+            }
+        }else if typeOfChart == "CuotaGlobal"{
             chartView.addSubview(cuotaGChart)
             cuotaGChart.center(in: chartView)
             cuotaGChart.width(to: chartView)
@@ -58,10 +152,10 @@ class ChartsViewController: UIViewController {
             cuotaTanatChart.width(to: chartView) //define el ancho de la gráfica
             cuotaTanatChart.heightToWidth(of: chartView) //definel el alto de la gráfica
         }else if typeOfChart == "Servicios"{
-            chartView.addSubview(pieChart) //agrega la gráfica a la vista
-            pieChart.center(in: chartView) //centra la gráfica en la vista
-            pieChart.width(to: chartView) //define el ancho de la gráfica
-            pieChart.heightToWidth(of: chartView) //definel el alto de la gráfica
+            chartView.addSubview(pieChartServicios) //agrega la gráfica a la vista
+            pieChartServicios.center(in: chartView) //centra la gráfica en la vista
+            pieChartServicios.width(to: chartView) //define el ancho de la gráfica
+            pieChartServicios.heightToWidth(of: chartView) //definel el alto de la gráfica
         }else if typeOfChart == "Intervenciones"{
             chartView.addSubview(barChart) //agrega la gráfica a la vista
             barChart.center(in: chartView) //centra la gráfica en la vista
@@ -70,8 +164,112 @@ class ChartsViewController: UIViewController {
         }
         
         
+                
+    }
+
+    
+    func obtenerUsuariosTanatologo(){
+        var tant = [String: Int]()
+        print("entro a la funcion")
+        
+        var usuarios__ = [String]()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yy"
+        let inicio_ = dateFormatter.date(from: self.fechaInicio!)
+        let final_ = dateFormatter.date(from: self.fechaFinal!)
+        print("se declararon las funciones")
+        
+        for (key,value) in self.tanatologos{
+            tant[value.nombre] = 0
+        }
+        
+        for sesion in self.sesiones{
+            print("entro al for")
+            print(sesion.fecha)
+            var inter_ = dateFormatter.date(from: sesion.fecha)
+            print(type(of: inter_))
+            
+            if(inter_! >= inicio_! && inter_! <= final_!){
+                var nombre = tanatologos[sesion.IDTanatologo]?.nombre
+                var valorAnterior = tant[nombre!]
+                tant.updateValue(valorAnterior!+1, forKey: nombre!)
+            }else{
+                print("ninguno cumple")
+            }
+        }
+        var entradas = [PieChartDataEntry]()
+        for (key,value) in tant{
+            var punto1 = PieChartDataEntry(value: Double(value), label: key)
+            entradas.append(punto1)
+        }
+        
+        let dataSet = PieChartDataSet(entries: entradas, label: "Tanatólogos")
+        dataSet.colors = ChartColorTemplates.pastel()
+        let data = PieChartData(dataSet: dataSet)
+        self.pieChart.data = data
+
+        self.pieChart.notifyDataSetChanged()
     }
     
+    func obtenerUsuarios()
+    {
+        print("entro a la funcion")
+        var masc = 0
+        var fem = 0
+        var otro = 0
+        var usuarios__ = [String]()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yy"
+        let inicio_ = dateFormatter.date(from: self.fechaInicio!)
+        let final_ = dateFormatter.date(from: self.fechaFinal!)
+        print("se declararon las funciones")
+        
+        for sesion in self.sesiones{
+            print("entro al for")
+            print(sesion.fecha)
+            var inter_ = dateFormatter.date(from: sesion.fecha)
+            print(type(of: inter_))
+            
+            if(inter_! >= inicio_! && inter_! <= final_! && !usuarios__.contains(sesion.IDUsuario)){
+                usuarios__.append(sesion.IDUsuario)
+                print("entro al if")
+                print(sesion.IDUsuario)
+                db.collection("UsuarioInfo").document(sesion.IDUsuario).getDocument(){ (document, error) in
+                    if let document = document, document.exists {
+                        var encuadre = Encuadre(aDoc: document)
+                        print(encuadre.sexo)
+                       
+                        if(encuadre.sexo == "masculino"){
+                            masc = masc+1
+                        }else if(encuadre.sexo == "femenino"){
+                            fem = fem+1
+                        }else{
+                            otro = otro+1
+                        }
+                        print(masc)
+                        print(fem)
+                        print(otro)
+                        var punto1 = PieChartDataEntry(value: Double(masc), label: "masculino")
+                        var punto2 = PieChartDataEntry(value: Double(fem), label: "femenino")
+                        var punto3 = PieChartDataEntry(value: Double(otro), label: "otro")
+                        
+                        let dataSet = PieChartDataSet(entries: [punto1, punto2, punto3], label: "Sexos")
+                        dataSet.colors = ChartColorTemplates.pastel()
+                        let data = PieChartData(dataSet: dataSet)
+                        self.pieChart.data = data
+
+                        self.pieChart.notifyDataSetChanged()
+                    }else{
+                        print("No se encontro documento")
+                    }
+                }
+            }else{
+                print("ninguno cumple")
+            }
+        }
+        
+        
+    }
     func pieChartUpdate (with sesiones: Sesiones) {//future home of pie chart code
         if typeOfChart == "Servicios"{
             
@@ -81,12 +279,12 @@ class ChartsViewController: UIViewController {
         let dataSet = PieChartDataSet(entries: [entry1, entry2, entry3], label: "# tipo de servicio utilizado")
         dataSet.colors = ChartColorTemplates.joyful()
         let data = PieChartData(dataSet: dataSet)
-        pieChart.data = data
-        pieChart.chartDescription?.text = ""
-        pieChart.holeColor = UIColor.clear
-        pieChart.chartDescription?.textColor = UIColor.black
-        pieChart.legend.textColor = UIColor.black//This must stay at end of function
-        pieChart.notifyDataSetChanged()
+        pieChartServicios.data = data
+        pieChartServicios.chartDescription?.text = ""
+        pieChartServicios.holeColor = UIColor.clear
+        pieChartServicios.chartDescription?.textColor = UIColor.black
+        pieChartServicios.legend.textColor = UIColor.black//This must stay at end of function
+        pieChartServicios.notifyDataSetChanged()
             
     }else if typeOfChart == "Intervenciones"{
         
@@ -184,6 +382,8 @@ class ChartsViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -193,5 +393,7 @@ class ChartsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
+
+

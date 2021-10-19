@@ -27,7 +27,7 @@ class LoggedMenuViewController: UIViewController {
     }
     
     class MenuListController: UITableViewController{
-        var items = ["Servicios","Actualizar información", "Cerrar sesión"]
+        var items = ["Actualizar información", "Cerrar sesión"]
         let menuColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
         
         override func viewDidLoad() {
@@ -53,22 +53,18 @@ class LoggedMenuViewController: UIViewController {
             let screenStoryboardID : String
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
-            if rowNumber == 2 {
+            if rowNumber == 1 {
                 screenStoryboardID = "navBarLoginScreen"
-                let vc = storyboard.instantiateViewController(withIdentifier: screenStoryboardID) as! UINavigationController;
-                self.present(vc, animated: true, completion: nil);
-            }else if rowNumber == 1 {
-                screenStoryboardID = "Info"
             
-                let vc = storyboard.instantiateViewController(withIdentifier: screenStoryboardID) as! UIViewController;
+                let vc = storyboard.instantiateViewController(withIdentifier: screenStoryboardID) as! UINavigationController;
                 //let vc = storyboard.instantiateViewController(withIdentifier: screenStoryboardID) as! UIViewController;
                 self.present(vc, animated: true, completion: nil);
                 
             }
             else{
-                screenStoryboardID = "navBarServiciosMenu"
+                screenStoryboardID = "Info"
                 let storyboard = UIStoryboard(name: "Main", bundle: nil);
-                let vc = storyboard.instantiateViewController(withIdentifier: screenStoryboardID) as! UINavigationController;
+                let vc = storyboard.instantiateViewController(withIdentifier: screenStoryboardID) as! UIViewController;
                 self.present(vc, animated: true, completion: nil);
 
             }

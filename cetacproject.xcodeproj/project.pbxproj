@@ -64,6 +64,23 @@
 		09697D76271C8F02006B326C /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09697D75271C8F02006B326C /* ChartsViewController.swift */; };
 		0976066227036F9300E8378D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976066127036F9300E8378D /* PageViewController.swift */; };
 		0976C908271396AC009615DA /* ActualizacionBorradoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976C907271396AC009615DA /* ActualizacionBorradoTests.swift */; };
+		0992BD9E271F2F4D009A86F5 /* ReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BD9D271F2F4D009A86F5 /* ReportesViewController.swift */; };
+		0992BDA2271F2F5D009A86F5 /* CreateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDA1271F2F5D009A86F5 /* CreateReportViewController.swift */; };
+		0992BDB6271F308D009A86F5 /* Encuadre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDAD271F308B009A86F5 /* Encuadre.swift */; };
+		0992BDB7271F308D009A86F5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDAE271F308B009A86F5 /* Session.swift */; };
+		0992BDB8271F308D009A86F5 /* EncuadreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDAF271F308B009A86F5 /* EncuadreController.swift */; };
+		0992BDB9271F308D009A86F5 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDB0271F308C009A86F5 /* SessionController.swift */; };
+		0992BDBA271F308D009A86F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDB1271F308C009A86F5 /* User.swift */; };
+		0992BDBB271F308D009A86F5 /* Son.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDB2271F308C009A86F5 /* Son.swift */; };
+		0992BDBC271F308D009A86F5 /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDB3271F308C009A86F5 /* dates.swift */; };
+		0992BDBD271F308D009A86F5 /* SonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDB4271F308C009A86F5 /* SonController.swift */; };
+		0992BDBE271F308D009A86F5 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDB5271F308C009A86F5 /* UserController.swift */; };
+		0992BDC2271F3ECD009A86F5 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDC1271F3ECD009A86F5 /* AddUserViewController.swift */; };
+		0992BDCA271F46A9009A86F5 /* EncuadreTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDC5271F46A8009A86F5 /* EncuadreTwoViewController.swift */; };
+		0992BDCB271F46A9009A86F5 /* SessionOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDC6271F46A8009A86F5 /* SessionOneViewController.swift */; };
+		0992BDCC271F46A9009A86F5 /* AddSonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDC7271F46A8009A86F5 /* AddSonViewController.swift */; };
+		0992BDCD271F46A9009A86F5 /* TanaSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDC8271F46A9009A86F5 /* TanaSessionViewController.swift */; };
+		0992BDCE271F46A9009A86F5 /* EncuadreOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992BDC9271F46A9009A86F5 /* EncuadreOneViewController.swift */; };
 		09A46CF12718880C0059FC3E /* EncuadreUpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46CF02718880C0059FC3E /* EncuadreUpdateInfoViewController.swift */; };
 		09A46D092718A4ED0059FC3E /* SearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46D082718A4ED0059FC3E /* SearchUsersViewController.swift */; };
 		09AB97C5270D3A4E00B036D9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB97C4270D3A4E00B036D9 /* Login.swift */; };
@@ -165,6 +182,23 @@
 		0976C8D3271385D4009615DA /* cetacprojectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cetacprojectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0976C8D7271385D4009615DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0976C907271396AC009615DA /* ActualizacionBorradoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualizacionBorradoTests.swift; sourceTree = "<group>"; };
+		0992BD9D271F2F4D009A86F5 /* ReportesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportesViewController.swift; sourceTree = "<group>"; };
+		0992BDA1271F2F5D009A86F5 /* CreateReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateReportViewController.swift; sourceTree = "<group>"; };
+		0992BDAD271F308B009A86F5 /* Encuadre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encuadre.swift; sourceTree = "<group>"; };
+		0992BDAE271F308B009A86F5 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		0992BDAF271F308B009A86F5 /* EncuadreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncuadreController.swift; sourceTree = "<group>"; };
+		0992BDB0271F308C009A86F5 /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		0992BDB1271F308C009A86F5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0992BDB2271F308C009A86F5 /* Son.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Son.swift; sourceTree = "<group>"; };
+		0992BDB3271F308C009A86F5 /* dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dates.swift; sourceTree = "<group>"; };
+		0992BDB4271F308C009A86F5 /* SonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SonController.swift; sourceTree = "<group>"; };
+		0992BDB5271F308C009A86F5 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		0992BDC1271F3ECD009A86F5 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		0992BDC5271F46A8009A86F5 /* EncuadreTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncuadreTwoViewController.swift; sourceTree = "<group>"; };
+		0992BDC6271F46A8009A86F5 /* SessionOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionOneViewController.swift; sourceTree = "<group>"; };
+		0992BDC7271F46A8009A86F5 /* AddSonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSonViewController.swift; sourceTree = "<group>"; };
+		0992BDC8271F46A9009A86F5 /* TanaSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TanaSessionViewController.swift; sourceTree = "<group>"; };
+		0992BDC9271F46A9009A86F5 /* EncuadreOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncuadreOneViewController.swift; sourceTree = "<group>"; };
 		09A46CF02718880C0059FC3E /* EncuadreUpdateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuadreUpdateInfoViewController.swift; sourceTree = "<group>"; };
 		09A46D082718A4ED0059FC3E /* SearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewController.swift; sourceTree = "<group>"; };
 		09AB97C4270D3A4E00B036D9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -244,6 +278,22 @@
 			path = cetacprojectTests;
 			sourceTree = "<group>";
 		};
+		0992BDAC271F3066009A86F5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0992BDB3271F308C009A86F5 /* dates.swift */,
+				0992BDAD271F308B009A86F5 /* Encuadre.swift */,
+				0992BDAF271F308B009A86F5 /* EncuadreController.swift */,
+				0992BDAE271F308B009A86F5 /* Session.swift */,
+				0992BDB0271F308C009A86F5 /* SessionController.swift */,
+				0992BDB2271F308C009A86F5 /* Son.swift */,
+				0992BDB4271F308C009A86F5 /* SonController.swift */,
+				0992BDB1271F308C009A86F5 /* User.swift */,
+				0992BDB5271F308C009A86F5 /* UserController.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		09AB97CB270D47B800B036D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +335,7 @@
 		39F9042C26E28C650008FA80 /* cetacproject */ = {
 			isa = PBXGroup;
 			children = (
+				0992BDAC271F3066009A86F5 /* Class */,
 				4D8939392715283200011F15 /* fonts */,
 				09227174270F5119009A7AB7 /* LogInfo */,
 				09AB97CB270D47B800B036D9 /* Models */,
@@ -305,6 +356,12 @@
 			isa = PBXGroup;
 			children = (
 				39F9045126E299CC0008FA80 /* QuienesSomosViewController.swift */,
+				0992BDC7271F46A8009A86F5 /* AddSonViewController.swift */,
+				0992BDC9271F46A9009A86F5 /* EncuadreOneViewController.swift */,
+				0992BDC5271F46A8009A86F5 /* EncuadreTwoViewController.swift */,
+				0992BDC6271F46A8009A86F5 /* SessionOneViewController.swift */,
+				0992BDC8271F46A9009A86F5 /* TanaSessionViewController.swift */,
+				0992BDC1271F3ECD009A86F5 /* AddUserViewController.swift */,
 				09A46D082718A4ED0059FC3E /* SearchUsersViewController.swift */,
 				09619B04270E9283004D0683 /* LoggedMenuViewController.swift */,
 				0959E03F270CDCBF00DDA42D /* PagesMenuController.swift */,
@@ -312,9 +369,11 @@
 				39F9044F26E299950008FA80 /* MainMenuViewController.swift */,
 				0976066127036F9300E8378D /* PageViewController.swift */,
 				0922716B270F3E8A009A7AB7 /* UpdateInfoViewController.swift */,
+				0992BD9D271F2F4D009A86F5 /* ReportesViewController.swift */,
 				09E648D9271090790032E486 /* UserTableViewController.swift */,
 				09A46CF02718880C0059FC3E /* EncuadreUpdateInfoViewController.swift */,
 				09E648DE2710D0D80032E486 /* SubAdminTableViewController.swift */,
+				0992BDA1271F2F5D009A86F5 /* CreateReportViewController.swift */,
 				09F9523B2717958C002FCCCD /* TanatTableViewController.swift */,
 				09697D75271C8F02006B326C /* ChartsViewController.swift */,
 				09C9CE20271E65D600E0F994 /* FiltroReportesViewController.swift */,
@@ -658,24 +717,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0992BDCC271F46A9009A86F5 /* AddSonViewController.swift in Sources */,
+				0992BDCE271F46A9009A86F5 /* EncuadreOneViewController.swift in Sources */,
 				39F9045026E299950008FA80 /* MainMenuViewController.swift in Sources */,
 				09A46D092718A4ED0059FC3E /* SearchUsersViewController.swift in Sources */,
+				0992BDBD271F308D009A86F5 /* SonController.swift in Sources */,
 				0959E040270CDCBF00DDA42D /* PagesMenuController.swift in Sources */,
+				0992BDBA271F308D009A86F5 /* User.swift in Sources */,
+				0992BDBC271F308D009A86F5 /* dates.swift in Sources */,
+				0992BDB8271F308D009A86F5 /* EncuadreController.swift in Sources */,
+				0992BDBE271F308D009A86F5 /* UserController.swift in Sources */,
+				0992BDCA271F46A9009A86F5 /* EncuadreTwoViewController.swift in Sources */,
 				39F9045226E299CC0008FA80 /* QuienesSomosViewController.swift in Sources */,
 				39F9043226E28C650008FA80 /* ViewController.swift in Sources */,
 				0976066227036F9300E8378D /* PageViewController.swift in Sources */,
 				0922716C270F3E8A009A7AB7 /* UpdateInfoViewController.swift in Sources */,
 				09E648DF2710D0D80032E486 /* SubAdminTableViewController.swift in Sources */,
+				0992BD9E271F2F4D009A86F5 /* ReportesViewController.swift in Sources */,
+				0992BDB9271F308D009A86F5 /* SessionController.swift in Sources */,
 				09F9523C2717958C002FCCCD /* TanatTableViewController.swift in Sources */,
 				39F9042E26E28C650008FA80 /* AppDelegate.swift in Sources */,
 				09C9CE21271E65D600E0F994 /* FiltroReportesViewController.swift in Sources */,
+				0992BDA2271F2F5D009A86F5 /* CreateReportViewController.swift in Sources */,
+				0992BDB6271F308D009A86F5 /* Encuadre.swift in Sources */,
 				09A46CF12718880C0059FC3E /* EncuadreUpdateInfoViewController.swift in Sources */,
+				0992BDBB271F308D009A86F5 /* Son.swift in Sources */,
 				09AB97C9270D47AC00B036D9 /* LoginModels.swift in Sources */,
 				39F9043026E28C650008FA80 /* SceneDelegate.swift in Sources */,
 				09AB97C5270D3A4E00B036D9 /* Login.swift in Sources */,
+				0992BDC2271F3ECD009A86F5 /* AddUserViewController.swift in Sources */,
+				0992BDB7271F308D009A86F5 /* Session.swift in Sources */,
 				09E648DA271090790032E486 /* UserTableViewController.swift in Sources */,
 				09697D76271C8F02006B326C /* ChartsViewController.swift in Sources */,
+				0992BDCB271F46A9009A86F5 /* SessionOneViewController.swift in Sources */,
 				09619B05270E9283004D0683 /* LoggedMenuViewController.swift in Sources */,
+				0992BDCD271F46A9009A86F5 /* TanaSessionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
