@@ -51,7 +51,7 @@ class MainMenuViewController: UIViewController{
                     screenStoryboardID = "navBarTanMenu"
                     
                 }else if self.datos[0].permisos == 2{
-                    screenStoryboardID = "navBarAdminMenu"
+                    screenStoryboardID = "navBarSubAdminMenu"
                 }else{
                     screenStoryboardID = "navBarAdminMenu"
                 }

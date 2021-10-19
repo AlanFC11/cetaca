@@ -9,39 +9,48 @@
 import UIKit
 import Firebase
 
-class UserTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class UserTableViewController: UITableViewController{
     
-    @IBOutlet weak var usersTableView: UITableView!
+    var nameFilter:String = ""
+    var idFilter: String = ""
     
+    var servicioControlador = Login()
+    var datos = [LoginInfo]()
     var database = Login()
-    var datos = [Cuentas]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        usersTableView.dataSource = self
-        usersTableView.delegate = self
-        /*
-        database.fetchServicios{ (result) in
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       
+        servicioControlador.fetchUsers{ (result) in
             switch result{
-            case .success(let cuentasInfo):self.updateUI(with: cuentasInfo)
-            case .failure(let error):self.displayError(error, title: "No se pudo acceder a los servicios")
+            case .success(let loginInfos):self.updateUI(with: loginInfos)
+            case .failure(let error):self.displayError(error, title: "No se pudo acceder a los usuarios")
             }
             
         }
- */
-        self.datos = database.fetchCuentas()
-        usersTableView.reloadData()
-        //bsuper.viewDidLoad()
-        //print(datos[0].mail)
-        
-        
 
-    }
-    func updateUI(with cuentasInfo:CuentasInfo){
+        }
+    
+    func updateUI(with loginInfos: LoginInfos){
         DispatchQueue.main.async {
-            self.datos = cuentasInfo
-            print(self.datos[0])
-            //self.tableView.reloadData()
+            if self.nameFilter != "" {
+                self.datos = loginInfos.filter{$0.nombre == self.nameFilter}
+                
+            }else if self.idFilter != ""{
+                self.datos = loginInfos.filter{$0.id == self.idFilter}
+            }else{
+                self.datos = loginInfos
+            }
+            self.tableView.reloadData()
+            if self.datos.isEmpty{
+                self.createAlert(title: "Sin resultados", message: "No se encontraron usuarios con el filtro seleccionado")
+            }
         }
     }
     func displayError(_ error: Error, title: String) {
@@ -51,39 +60,50 @@ class UserTableViewController: UIViewController, UITableViewDataSource, UITableV
                 self.present(alert, animated: true, completion: nil)
             }
         }
+    func createAlert(title:String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)}))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     // MARK: - Table view data source
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+        override func numberOfSections(in tableView: UITableView) -> Int {
+            // #warning Incomplete implementation, return the number of sections
+            return 1
+        }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        print(self.datos.count)
-        return self.datos.count
-    }
+        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            // #warning Incomplete implementation, return the number of rows
+            return datos.count
+        }
 
+        
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath)
+
+            // Configure the cell...
+            cell.textLabel?.text = datos[indexPath.row].nombre
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath)
-        print("holaq")
-        // Configure the cell...
-        cell.textLabel?.text = datos[indexPath.row].nombre
-        print("hola")
-        print(datos[indexPath.row].nombre)
-        cell.textLabel?.textColor = .black
 
-        return cell
-    }
-    /*
+            return cell
+        }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+         let siguiente = segue.destination as! EncuadreUpdateInfoViewController
+         let indice = self.tableView.indexPathForSelectedRow?.row
+         siguiente.user = datos[indice!]
+     }
+    
 
+}
+extension Array where Element: Equatable {
+    func all(where predicate: (Element) -> Bool) -> [Element]  {
+        return self.compactMap { predicate($0) ? $0 : nil }
+    }
 }

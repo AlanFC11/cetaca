@@ -8,6 +8,9 @@ target 'cetacproject' do
 pod 'SideMenu'
 pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
+pod 'Charts'
+pod 'TinyConstraints'
+
 target 'cetacprojectTests' do 
 
 inherit! :search_paths

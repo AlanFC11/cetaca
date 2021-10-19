@@ -61,13 +61,17 @@
 		09619B05270E9283004D0683 /* LoggedMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09619B04270E9283004D0683 /* LoggedMenuViewController.swift */; };
 		09619B08270EA2DF004D0683 /* typeOfMenu.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09619B07270EA2DF004D0683 /* typeOfMenu.txt */; };
 		09619B0B270EA2FD004D0683 /* selectedOptionIndex.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09619B0A270EA2FD004D0683 /* selectedOptionIndex.txt */; };
+		09697D76271C8F02006B326C /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09697D75271C8F02006B326C /* ChartsViewController.swift */; };
 		0976066227036F9300E8378D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976066127036F9300E8378D /* PageViewController.swift */; };
 		0976C908271396AC009615DA /* ActualizacionBorradoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976C907271396AC009615DA /* ActualizacionBorradoTests.swift */; };
+		09A46CF12718880C0059FC3E /* EncuadreUpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46CF02718880C0059FC3E /* EncuadreUpdateInfoViewController.swift */; };
+		09A46D092718A4ED0059FC3E /* SearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46D082718A4ED0059FC3E /* SearchUsersViewController.swift */; };
 		09AB97C5270D3A4E00B036D9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB97C4270D3A4E00B036D9 /* Login.swift */; };
 		09AB97C9270D47AC00B036D9 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB97C8270D47AC00B036D9 /* LoginModels.swift */; };
+		09C9CE21271E65D600E0F994 /* FiltroReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9CE20271E65D600E0F994 /* FiltroReportesViewController.swift */; };
 		09E648DA271090790032E486 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E648D9271090790032E486 /* UserTableViewController.swift */; };
-		09E648DF2710D0D80032E486 /* TableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E648DE2710D0D80032E486 /* TableTableViewController.swift */; };
-		09E648E22710E4790032E486 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E648E12710E4790032E486 /* EditInfoViewController.swift */; };
+		09E648DF2710D0D80032E486 /* SubAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E648DE2710D0D80032E486 /* SubAdminTableViewController.swift */; };
+		09F9523C2717958C002FCCCD /* TanatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9523B2717958C002FCCCD /* TanatTableViewController.swift */; };
 		1557426BFD5BBBC844876CA5 /* Pods_cetacprojectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EADB4D8ABBAC553975F788 /* Pods_cetacprojectTests.framework */; };
 		28263A32FCBADFCC8A2F4597 /* Pods_cetacproject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C768D80B4926388B081050F0 /* Pods_cetacproject.framework */; };
 		39F9042E26E28C650008FA80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F9042D26E28C650008FA80 /* AppDelegate.swift */; };
@@ -84,7 +88,6 @@
 		39F9044E26E293D40008FA80 /* feliz.png in Resources */ = {isa = PBXBuildFile; fileRef = 39F9044D26E293D40008FA80 /* feliz.png */; };
 		39F9045026E299950008FA80 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F9044F26E299950008FA80 /* MainMenuViewController.swift */; };
 		39F9045226E299CC0008FA80 /* QuienesSomosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F9045126E299CC0008FA80 /* QuienesSomosViewController.swift */; };
-		4D0A6DB9271670930016562A /* nuevafoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A6DB8271670930016562A /* nuevafoto.jpg */; };
 		4D0A6DBF271671820016562A /* la buena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A6DBE271671820016562A /* la buena.jpg */; };
 		4D0A6DC3271675A20016562A /* mindfulnesslabuena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A6DC2271675A10016562A /* mindfulnesslabuena.jpg */; };
 		4D4BB04A270B55FA0001B87A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4BB049270B55FA0001B87A /* GoogleService-Info.plist */; };
@@ -157,15 +160,19 @@
 		09619B04270E9283004D0683 /* LoggedMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedMenuViewController.swift; sourceTree = "<group>"; };
 		09619B07270EA2DF004D0683 /* typeOfMenu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = typeOfMenu.txt; sourceTree = "<group>"; };
 		09619B0A270EA2FD004D0683 /* selectedOptionIndex.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = selectedOptionIndex.txt; sourceTree = "<group>"; };
+		09697D75271C8F02006B326C /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		0976066127036F9300E8378D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		0976C8D3271385D4009615DA /* cetacprojectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cetacprojectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0976C8D7271385D4009615DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0976C907271396AC009615DA /* ActualizacionBorradoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualizacionBorradoTests.swift; sourceTree = "<group>"; };
+		09A46CF02718880C0059FC3E /* EncuadreUpdateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuadreUpdateInfoViewController.swift; sourceTree = "<group>"; };
+		09A46D082718A4ED0059FC3E /* SearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewController.swift; sourceTree = "<group>"; };
 		09AB97C4270D3A4E00B036D9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		09AB97C8270D47AC00B036D9 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		09C9CE20271E65D600E0F994 /* FiltroReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroReportesViewController.swift; sourceTree = "<group>"; };
 		09E648D9271090790032E486 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
-		09E648DE2710D0D80032E486 /* TableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTableViewController.swift; sourceTree = "<group>"; };
-		09E648E12710E4790032E486 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		09E648DE2710D0D80032E486 /* SubAdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubAdminTableViewController.swift; sourceTree = "<group>"; };
+		09F9523B2717958C002FCCCD /* TanatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanatTableViewController.swift; sourceTree = "<group>"; };
 		156CC3C3A10873504B810BD1 /* Pods-cetacprojectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacprojectTests.release.xcconfig"; path = "Target Support Files/Pods-cetacprojectTests/Pods-cetacprojectTests.release.xcconfig"; sourceTree = "<group>"; };
 		1DFD3D9081367E0AE277AEA4 /* Pods-cetacproject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacproject.debug.xcconfig"; path = "Target Support Files/Pods-cetacproject/Pods-cetacproject.debug.xcconfig"; sourceTree = "<group>"; };
 		39F9042A26E28C650008FA80 /* cetacproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cetacproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +191,6 @@
 		39F9044D26E293D40008FA80 /* feliz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feliz.png; sourceTree = "<group>"; };
 		39F9044F26E299950008FA80 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		39F9045126E299CC0008FA80 /* QuienesSomosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuienesSomosViewController.swift; sourceTree = "<group>"; };
-		4D0A6DB8271670930016562A /* nuevafoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nuevafoto.jpg; path = ../../../../../Downloads/nuevafoto.jpg; sourceTree = "<group>"; };
 		4D0A6DBE271671820016562A /* la buena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "la buena.jpg"; sourceTree = "<group>"; };
 		4D0A6DC2271675A10016562A /* mindfulnesslabuena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mindfulnesslabuena.jpg; sourceTree = "<group>"; };
 		4D4BB049270B55FA0001B87A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -299,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				39F9045126E299CC0008FA80 /* QuienesSomosViewController.swift */,
+				09A46D082718A4ED0059FC3E /* SearchUsersViewController.swift */,
 				09619B04270E9283004D0683 /* LoggedMenuViewController.swift */,
 				0959E03F270CDCBF00DDA42D /* PagesMenuController.swift */,
 				39F9043126E28C650008FA80 /* ViewController.swift */,
@@ -306,8 +313,11 @@
 				0976066127036F9300E8378D /* PageViewController.swift */,
 				0922716B270F3E8A009A7AB7 /* UpdateInfoViewController.swift */,
 				09E648D9271090790032E486 /* UserTableViewController.swift */,
-				09E648DE2710D0D80032E486 /* TableTableViewController.swift */,
-				09E648E12710E4790032E486 /* EditInfoViewController.swift */,
+				09A46CF02718880C0059FC3E /* EncuadreUpdateInfoViewController.swift */,
+				09E648DE2710D0D80032E486 /* SubAdminTableViewController.swift */,
+				09F9523B2717958C002FCCCD /* TanatTableViewController.swift */,
+				09697D75271C8F02006B326C /* ChartsViewController.swift */,
+				09C9CE20271E65D600E0F994 /* FiltroReportesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				4D0A6DBE271671820016562A /* la buena.jpg */,
-				4D0A6DB8271670930016562A /* nuevafoto.jpg */,
 				4D0A6DC2271675A10016562A /* mindfulnesslabuena.jpg */,
 				09477EE326E4AC4C00982928 /* mapapa.png */,
 				09477EDA26E4ABFE00982928 /* user1.png */,
@@ -549,7 +558,6 @@
 				09477EDD26E4ABFF00982928 /* whats.png in Resources */,
 				4D4BB04A270B55FA0001B87A /* GoogleService-Info.plist in Resources */,
 				09477ECC26E4ABD300982928 /* medkit.png in Resources */,
-				4D0A6DB9271670930016562A /* nuevafoto.jpg in Resources */,
 				39F9044826E291D20008FA80 /* alternative.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,18 +659,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				39F9045026E299950008FA80 /* MainMenuViewController.swift in Sources */,
+				09A46D092718A4ED0059FC3E /* SearchUsersViewController.swift in Sources */,
 				0959E040270CDCBF00DDA42D /* PagesMenuController.swift in Sources */,
 				39F9045226E299CC0008FA80 /* QuienesSomosViewController.swift in Sources */,
 				39F9043226E28C650008FA80 /* ViewController.swift in Sources */,
 				0976066227036F9300E8378D /* PageViewController.swift in Sources */,
 				0922716C270F3E8A009A7AB7 /* UpdateInfoViewController.swift in Sources */,
-				09E648DF2710D0D80032E486 /* TableTableViewController.swift in Sources */,
+				09E648DF2710D0D80032E486 /* SubAdminTableViewController.swift in Sources */,
+				09F9523C2717958C002FCCCD /* TanatTableViewController.swift in Sources */,
 				39F9042E26E28C650008FA80 /* AppDelegate.swift in Sources */,
-				09E648E22710E4790032E486 /* EditInfoViewController.swift in Sources */,
+				09C9CE21271E65D600E0F994 /* FiltroReportesViewController.swift in Sources */,
+				09A46CF12718880C0059FC3E /* EncuadreUpdateInfoViewController.swift in Sources */,
 				09AB97C9270D47AC00B036D9 /* LoginModels.swift in Sources */,
 				39F9043026E28C650008FA80 /* SceneDelegate.swift in Sources */,
 				09AB97C5270D3A4E00B036D9 /* Login.swift in Sources */,
 				09E648DA271090790032E486 /* UserTableViewController.swift in Sources */,
+				09697D76271C8F02006B326C /* ChartsViewController.swift in Sources */,
 				09619B05270E9283004D0683 /* LoggedMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
