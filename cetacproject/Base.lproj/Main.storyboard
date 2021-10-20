@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hph-0l-saw">
-                                <rect key="frame" x="25" y="701.66666666666663" width="125" height="177"/>
+                                <rect key="frame" x="25" y="701.66666666666663" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="2jG-el-JSd"/>
                                     <constraint firstAttribute="height" constant="125" id="gR8-dl-sQ9"/>
@@ -168,32 +168,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Quiénes somos?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d0-ES-wEQ">
-                                <rect key="frame" x="175" y="154" width="228" height="29.666666666666657"/>
+                                <rect key="frame" x="175" y="154" width="214" height="29.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servicios de acompañamiento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTO-7n-jZr">
-                                <rect key="frame" x="175" y="283.66666666666669" width="228" height="50"/>
+                                <rect key="frame" x="175" y="283.66666666666669" width="214" height="50"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Herramientas alternativas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYJ-z9-m2E">
-                                <rect key="frame" x="175" y="583.66666666666663" width="228" height="50"/>
+                                <rect key="frame" x="175" y="583.66666666666663" width="214" height="50"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servicios holísticos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bML-SP-cui">
-                                <rect key="frame" x="175" y="448.66666666666669" width="228" height="25"/>
+                                <rect key="frame" x="175" y="448.66666666666669" width="214" height="25"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacto y ubicación" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGd-Y9-DFf">
-                                <rect key="frame" x="175" y="733.66666666666663" width="228" height="102"/>
+                                <rect key="frame" x="175" y="733.66666666666663" width="214" height="50"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -331,7 +331,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLQ-Li-zPA">
-                                <rect key="frame" x="215" y="218" width="175" height="175"/>
+                                <rect key="frame" x="229" y="218" width="175" height="227"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="Dyz-mr-RKV"/>
                                     <constraint firstAttribute="height" constant="175" id="uwp-0D-MzK"/>
@@ -342,7 +342,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67z-ki-5ih">
-                                <rect key="frame" x="214" y="460" width="175" height="175"/>
+                                <rect key="frame" x="228" y="512" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="gHS-Q9-3Rr"/>
                                     <constraint firstAttribute="height" constant="175" id="m4d-wo-0CS"/>
@@ -353,7 +353,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfm-Qq-IQI">
-                                <rect key="frame" x="24" y="460" width="175" height="175"/>
+                                <rect key="frame" x="24" y="512" width="189" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="j0C-fF-cPw"/>
                                     <constraint firstAttribute="height" constant="175" id="rsT-Xe-PYm"/>
@@ -364,7 +364,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zo7-it-cZV">
-                                <rect key="frame" x="25" y="218" width="175" height="175"/>
+                                <rect key="frame" x="25" y="218" width="189" height="227"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="1Mb-lh-YMx"/>
                                     <constraint firstAttribute="width" constant="175" id="bpz-SK-Lk8"/>
@@ -376,28 +376,28 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc3-wj-vmC">
-                                <rect key="frame" x="24" y="393" width="177" height="42"/>
+                                <rect key="frame" x="24" y="445" width="191" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-JW-7ie">
-                                <rect key="frame" x="24" y="635" width="175" height="42"/>
+                                <rect key="frame" x="24" y="687" width="189" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MI3-b0-wKy">
-                                <rect key="frame" x="216" y="393" width="175" height="42"/>
+                                <rect key="frame" x="230" y="445" width="175" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objetivos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLa-PQ-ghC">
-                                <rect key="frame" x="214" y="635" width="176" height="42"/>
+                                <rect key="frame" x="228" y="687" width="176" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -1923,7 +1923,7 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHQ-hc-wtV">
-                                <rect key="frame" x="80" y="250" width="75" height="75"/>
+                                <rect key="frame" x="80" y="250" width="89" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="8vW-2b-4pq"/>
                                     <constraint firstAttribute="height" constant="75" id="nR6-bk-Ny8"/>
@@ -1952,37 +1952,37 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                 <state key="normal" image="mail.png"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5587489815 5578415247 5580621982" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3u9-8n-KR7">
-                                <rect key="frame" x="205" y="198" width="149" height="134"/>
+                                <rect key="frame" x="205" y="198" width="163" height="134"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Página web: www.cetac.mx" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-rb-KHO">
-                                <rect key="frame" x="190" y="323" width="181" height="104"/>
+                                <rect key="frame" x="190" y="323" width="195" height="104"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electrónico: contacto@cetac.mx" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwu-1f-ull">
-                                <rect key="frame" x="170" y="487" width="239" height="52"/>
+                                <rect key="frame" x="170" y="487" width="253" height="52"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om7-9E-e5Z">
-                                <rect key="frame" x="25" y="128" width="364" height="82"/>
+                                <rect key="frame" x="25" y="128" width="378" height="82"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultorios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jML-fX-9Iz">
-                                <rect key="frame" x="25" y="609" width="364" height="30"/>
+                                <rect key="frame" x="25" y="609" width="378" height="30"/>
                                 <fontDescription key="fontDescription" name="Modern-M" family="Modern M" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mW-au-74e">
-                                <rect key="frame" x="0.0" y="659" width="414" height="93"/>
+                                <rect key="frame" x="0.0" y="659" width="428" height="93"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Consultorio 1:                                                         Iztapalapa (Calle La Venta) Calz. Ermita Iztapalapa 1119 4A Barrio San Lucas, C.P. 09000 CDMX, Iztapalapa</string>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
@@ -1990,7 +1990,7 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbU-iu-ofT">
-                                <rect key="frame" x="0.0" y="756" width="414" height="69.666666666666629"/>
+                                <rect key="frame" x="0.0" y="756" width="428" height="69.666666666666629"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Consultorio 2:                                                         Viaducto Miguel Alemán 892 int 102, Nápoles,      Alcaldía Benito Juárez, C.P. 03810</string>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
@@ -2178,18 +2178,17 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                 <rect key="frame" x="0.0" y="88" width="428" height="804"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="giP-Q0-siy">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="793"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="806"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jh-4R-ZFL">
-                                                <rect key="frame" x="0.0" y="0.0" width="428" height="793"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="428" height="806"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9O-5W-ZA4">
-                                                        <rect key="frame" x="65" y="734" width="298" height="30"/>
+                                                        <rect key="frame" x="65" y="747" width="298" height="30"/>
                                                         <color key="backgroundColor" systemColor="linkColor"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Actualizar"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
@@ -2199,40 +2198,40 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                                         </connections>
                                                     </button>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-Ah-6hf">
-                                                        <rect key="frame" x="299" y="653" width="51" height="31"/>
+                                                        <rect key="frame" x="299" y="666" width="51" height="31"/>
                                                     </switch>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono casa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-WM-ZSb">
-                                                        <rect key="frame" x="50" y="393" width="328" height="34"/>
+                                                        <rect key="frame" x="50" y="406" width="328" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Celular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jm2-Ai-CrV">
-                                                        <rect key="frame" x="50" y="442" width="328" height="34"/>
+                                                        <rect key="frame" x="50" y="455" width="328" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbq-0x-YPb">
-                                                        <rect key="frame" x="50" y="540" width="328" height="34"/>
+                                                        <rect key="frame" x="50" y="553" width="328" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Religión" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rwc-6l-HyW">
-                                                        <rect key="frame" x="50" y="246" width="328" height="34"/>
+                                                        <rect key="frame" x="50" y="259" width="328" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Procedencia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="da9-FB-uMJ">
-                                                        <rect key="frame" x="50" y="295" width="328" height="34"/>
+                                                        <rect key="frame" x="50" y="308" width="328" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Domicilio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seE-KP-sQs">
-                                                        <rect key="frame" x="50" y="344" width="328" height="34"/>
+                                                        <rect key="frame" x="50" y="357" width="328" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ocupación" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rPv-rE-Ivs">
-                                                        <rect key="frame" x="50" y="195.66666666666669" width="328" height="35.333333333333343"/>
+                                                        <rect key="frame" x="50" y="195.66666666666669" width="328" height="48.333333333333343"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2279,17 +2278,17 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sexo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jB7-vF-aH0">
-                                                        <rect key="frame" x="50" y="491" width="328" height="34"/>
+                                                        <rect key="frame" x="50" y="504" width="328" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado civil" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-tV-UDV">
-                                                        <rect key="frame" x="50" y="589" width="328" height="34"/>
+                                                        <rect key="frame" x="50" y="602" width="328" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Seguro que desea actualizar la información?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlH-Yt-ywO">
-                                                        <rect key="frame" x="80" y="653" width="178" height="36"/>
+                                                        <rect key="frame" x="80" y="666" width="178" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="1SP-YN-qKP"/>
                                                             <constraint firstAttribute="width" constant="178" id="Yio-HC-y7e"/>
@@ -2302,7 +2301,6 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" red="0.0" green="0.7754448585" blue="0.96113989639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="a1B-6Q-0A4" firstAttribute="leading" secondItem="39r-hL-YmA" secondAttribute="trailing" constant="10" id="2Ek-kX-TGo"/>
@@ -2354,6 +2352,11 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                                     <constraint firstItem="lOh-WM-ZSb" firstAttribute="top" secondItem="seE-KP-sQs" secondAttribute="bottom" constant="15" id="xxt-wo-FrE"/>
                                                     <constraint firstAttribute="trailing" secondItem="rwc-6l-HyW" secondAttribute="trailing" constant="50" id="ysl-xT-2pU"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="MIV-OB-zSe" appends="YES" id="mZd-0S-jwj"/>
                                                 </connections>
@@ -3033,6 +3036,11 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Añadir tanatólogos"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="8SK-VH-hom" kind="show" id="eMX-HO-f60"/>
                                 </connections>
@@ -3046,6 +3054,11 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Ver todos"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="showAllTanat" destination="qep-BS-SoY" eventType="touchUpInside" id="jMq-Q4-zGb"/>
                                     <segue destination="h4c-OT-hgC" kind="show" id="fZF-SU-PY1"/>
@@ -3060,7 +3073,9 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Buscar"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="filterByNameTanat" destination="qep-BS-SoY" eventType="touchUpInside" id="U7l-FT-TGV"/>
@@ -3126,6 +3141,11 @@ Es un proceso en donde la persona vive un estado de bienestar físico, emocional
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Ver todos"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="showAllSubAdmin" destination="zJR-K8-ILS" eventType="touchUpInside" id="GQF-ny-Woc"/>
                                     <segue destination="aHU-3T-cRF" kind="show" id="kDd-Ku-a7E"/>
