@@ -26,18 +26,18 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         return pieChartView
     }()
 
-    lazy var barChart: BarChartView = {
-        let barChartView = BarChartView()
+    lazy var barChart: PieChartView = {
+        let barChartView = PieChartView()
         return barChartView
     }()
  
-    lazy var cuotaGChart: LineChartView = {
-       let view = LineChartView()
+    lazy var cuotaGChart: PieChartView = {
+       let view = PieChartView()
         return view
     }()
     
-    lazy var cuotaTanatChart: LineChartView = {
-       let view = LineChartView()
+    lazy var cuotaTanatChart: PieChartView = {
+       let view = PieChartView()
         return view
     }()
     
@@ -182,7 +182,7 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
             pieChartServicios.width(to: chartView) //define el ancho de la gráfica
             pieChartServicios.heightToWidth(of: chartView) //definel el alto de la gráfica
         }else if typeOfChart == "Intervenciones"{
-            titulo.text = "Número de intervenciones"
+            titulo.text = "Intervenciones"
             chartView.addSubview(barChart) //agrega la gráfica a la vista
             barChart.center(in: chartView) //centra la gráfica en la vista
             barChart.width(to: chartView) //define el ancho de la gráfica
@@ -222,14 +222,17 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
             entradas.append(punto1)
         }
         var colores = [UIColor]()
+        let dataSet = PieChartDataSet(entries: entradas, label: "")
+        
         colores.append(contentsOf: ChartColorTemplates.pastel())
         colores.append(contentsOf: ChartColorTemplates.material())
-        let dataSet = PieChartDataSet(entries: entradas, label: "")
         dataSet.colors = colores
+        self.pieChart.drawEntryLabelsEnabled = false
+        
         let data = PieChartData(dataSet: dataSet)
         self.pieChart.data = data
         self.pieChart.legend.wordWrapEnabled = true
-        self.pieChart.drawEntryLabelsEnabled = false
+        
         self.pieChart.entryLabelColor = UIColor.black
         
         
@@ -364,13 +367,18 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         let entry2 = PieChartDataEntry(value: Double(filteredByDate.filter{$0.servicio == "Holístico"}.count), label: "Holísticos")
         let entry3 = PieChartDataEntry(value: Double(filteredByDate.filter{$0.servicio == "Alternativas"}.count), label: "Alternativas")
         let dataSet = PieChartDataSet(entries: [entry1, entry2, entry3], label: "# tipo de servicio utilizado")
-        dataSet.colors = ChartColorTemplates.pastel()
+       
         let data = PieChartData(dataSet: dataSet)
         pieChartServicios.data = data
         pieChartServicios.chartDescription?.text = ""
         pieChartServicios.holeColor = UIColor.clear
         pieChartServicios.chartDescription?.textColor = UIColor.black
         pieChartServicios.legend.textColor = UIColor.black//This must stay at end of function
+        var colores = [UIColor]()
+        colores.append(contentsOf: ChartColorTemplates.pastel())
+        colores.append(contentsOf: ChartColorTemplates.material())
+        dataSet.colors = colores
+        pieChartServicios.drawEntryLabelsEnabled = false
         pieChartServicios.notifyDataSetChanged()
             
     }else if typeOfChart == "Intervenciones"{
@@ -391,20 +399,20 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
                 print("ninguno cumple")
             }
         }
-        let entry1bar = BarChartDataEntry(x: 1, y: Double(filteredByDate.filter{$0.intervencion == "Tanatología"}.count))
-        let entry2bar = BarChartDataEntry(x: 2, y:  Double(filteredByDate.filter{$0.intervencion == "Acompañamiento individual"}.count))
-        let entry3bar = BarChartDataEntry(x: 3, y:  Double(filteredByDate.filter{$0.intervencion == "Acompañamiento grupal"}.count))
-        let entry4bar = BarChartDataEntry(x: 4, y:  Double(filteredByDate.filter{$0.intervencion == "Logoterapia"}.count))
-        let entry5bar = BarChartDataEntry(x: 5, y:  Double(filteredByDate.filter{$0.intervencion == "Mindfulness"}.count))
-        let entry6bar = BarChartDataEntry(x: 6, y:  Double(filteredByDate.filter{$0.intervencion == "Aromaterapia y musicoterapia"}.count))
-        let entry7bar = BarChartDataEntry(x: 7, y:  Double(filteredByDate.filter{$0.intervencion == "Cristaloterapia"}.count))
-        let entry8bar = BarChartDataEntry(x: 8, y:  Double(filteredByDate.filter{$0.intervencion == "Reiki"}.count))
-        let entry9bar = BarChartDataEntry(x: 9, y: Double(filteredByDate.filter{$0.intervencion == "Biomagnetismo"}.count))
-        let entry10bar = BarChartDataEntry(x: 10, y:  Double(filteredByDate.filter{$0.intervencion == "Angeloterapia"}.count))
-        let entry11bar = BarChartDataEntry(x: 11, y:  Double(filteredByDate.filter{$0.intervencion == "Cama térmica de Jade"}.count))
-        let entry12bar = BarChartDataEntry(x: 12, y:  Double(filteredByDate.filter{$0.intervencion == "Flores de Bach"}.count))
-        let entry13bar = BarChartDataEntry(x: 13, y:  Double(filteredByDate.filter{$0.intervencion == "Brisas ambientales"}.count))
-        var arreglo = [BarChartDataEntry]()
+        let entry1bar = PieChartDataEntry(value: Double(filteredByDate.filter{$0.intervencion == "Tanatología"}.count), label:"Tanatología")
+        let entry2bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Acompañamiento individual"}.count), label: "Acompañamiento individual")
+        let entry3bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Acompañamiento grupal"}.count), label: "Acompañamiento grupal")
+        let entry4bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Logoterapia"}.count), label:"Logoterapia")
+        let entry5bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Mindfulness"}.count), label: "Mindfulness")
+        let entry6bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Aromaterapia y musicoterapia"}.count), label:"Aromaterapia")
+        let entry7bar = PieChartDataEntry(value: Double(filteredByDate.filter{$0.intervencion == "Cristaloterapia"}.count), label: "Cristaloterapia")
+        let entry8bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Reiki"}.count), label: "Reiki")
+        let entry9bar = PieChartDataEntry(value: Double(filteredByDate.filter{$0.intervencion == "Biomagnetismo"}.count), label: "Biomagnetismo")
+        let entry10bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Angeloterapia"}.count), label: "Angeloterapia")
+        let entry11bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Cama térmica de Jade"}.count), label: "Cama de jade")
+        let entry12bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Flores de Bach"}.count), label: "Flores de Bach")
+        let entry13bar = PieChartDataEntry(value:  Double(filteredByDate.filter{$0.intervencion == "Brisas ambientales"}.count), label: "Brisas ambientales")
+        var arreglo = [PieChartDataEntry]()
         arreglo.append(entry1bar)
         arreglo.append(entry2bar)
         arreglo.append(entry3bar)
@@ -418,16 +426,24 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         arreglo.append(entry11bar)
         arreglo.append(entry12bar)
         arreglo.append(entry13bar)
-        let dataSetbar = BarChartDataSet(entries: arreglo, label: "# tipo de intervención")
-        dataSetbar.colors = ChartColorTemplates.joyful()
-        let databar = BarChartData(dataSet: dataSetbar)
+        let dataSetbar = PieChartDataSet(entries: arreglo, label: "número de intervención")
+        
+        let databar = PieChartData(dataSet: dataSetbar)
         barChart.data = databar
-        barChart.drawGridBackgroundEnabled = false
+        
         barChart.chartDescription?.text = ""
         barChart.chartDescription?.textColor = UIColor.black
+        barChart.drawEntryLabelsEnabled = false
         let intervenciones = ["","Tanatología", "Ac.Ind.","Ac.Grup.", "Logoterapia", "Mindfulness", "Aroma. y music.", "Cristaloterapia", "Reiki","Biomag.","Angeloterapia","Cama tér.","Flores Bach","Brisas amb."]
-        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: intervenciones)
+        
         barChart.legend.textColor = UIColor.black//This must stay at end of function
+        var colores = [UIColor]()
+        colores.append(contentsOf: ChartColorTemplates.pastel())
+        colores.append(contentsOf: ChartColorTemplates.material())
+        colores.append(contentsOf: ChartColorTemplates.joyful())
+        colores.append(contentsOf: ChartColorTemplates.liberty())
+        colores.append(contentsOf: ChartColorTemplates.vordiplom())
+        dataSetbar.colors = colores
         barChart.notifyDataSetChanged()
         
     }
@@ -465,6 +481,11 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         }
         let dataSetGlobalCuota = PieChartDataSet(entries: entriesPerYear, label: "Cuota de recuperación global| Pesos MXN | Año")
         dataSetGlobalCuota.colors = ChartColorTemplates.pastel()
+            var colores = [UIColor]()
+            colores.append(contentsOf: ChartColorTemplates.pastel())
+            colores.append(contentsOf: ChartColorTemplates.material())
+            dataSetGlobalCuota.colors = colores
+            cuotaGChart.drawEntryLabelsEnabled = false
         let dataGlobalCuota = PieChartData(dataSet: dataSetGlobalCuota)
         cuotaGChart.data = dataGlobalCuota
             cuotaGChart.legend.textColor = .black
@@ -512,12 +533,18 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         }
         let dataSetTanatCuota = PieChartDataSet(entries: entriesPerTanat, label: "Cuota de recuperación por tanatólogo")
         dataSetTanatCuota.colors = ChartColorTemplates.pastel()
+            var colores = [UIColor]()
+            colores.append(contentsOf: ChartColorTemplates.pastel())
+            colores.append(contentsOf: ChartColorTemplates.material())
+            dataSetTanatCuota.colors = colores
+            cuotaTanatChart.drawEntryLabelsEnabled = false
         let dataTanatCuota = PieChartData(dataSet: dataSetTanatCuota)
         cuotaTanatChart.data = dataTanatCuota
-            cuotaGChart.legend.textColor = .black
+        cuotaGChart.legend.textColor = .black
         cuotaTanatChart.notifyDataSetChanged()
         }
     }
+    
     func displayError(_ error: Error, title: String) {
             DispatchQueue.main.async {
                 let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
