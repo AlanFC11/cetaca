@@ -110,6 +110,10 @@
 		4D4BB04A270B55FA0001B87A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4BB049270B55FA0001B87A /* GoogleService-Info.plist */; };
 		4D89393B271528B000011F15 /* ModernSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D89393A271528B000011F15 /* ModernSans-Light.otf */; };
 		4D89393F271528C600011F15 /* modern M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D89393E271528C600011F15 /* modern M.ttf */; };
+		4DB06DAE271FF6D300ACDC46 /* VerSesionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB06DAD271FF6D300ACDC46 /* VerSesionesTableViewController.swift */; };
+		4DB06DAF271FF6D300ACDC46 /* VerSesionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB06DAD271FF6D300ACDC46 /* VerSesionesTableViewController.swift */; };
+		4DB06DBA272004C800ACDC46 /* VerLaSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB06DB9272004C800ACDC46 /* VerLaSesionViewController.swift */; };
+		4DB06DBB272004C800ACDC46 /* VerLaSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB06DB9272004C800ACDC46 /* VerLaSesionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +234,8 @@
 		4D4BB049270B55FA0001B87A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D89393A271528B000011F15 /* ModernSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ModernSans-Light.otf"; sourceTree = "<group>"; };
 		4D89393E271528C600011F15 /* modern M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "modern M.ttf"; sourceTree = "<group>"; };
+		4DB06DAD271FF6D300ACDC46 /* VerSesionesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSesionesTableViewController.swift; sourceTree = "<group>"; };
+		4DB06DB9272004C800ACDC46 /* VerLaSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerLaSesionViewController.swift; sourceTree = "<group>"; };
 		7CC84C5BC4B8366EE0C17F3C /* Pods-cetacprojectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacprojectTests.debug.xcconfig"; path = "Target Support Files/Pods-cetacprojectTests/Pods-cetacprojectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		868DEA683EB4A2383D90970C /* Pods-cetacproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cetacproject.release.xcconfig"; path = "Target Support Files/Pods-cetacproject/Pods-cetacproject.release.xcconfig"; sourceTree = "<group>"; };
 		C768D80B4926388B081050F0 /* Pods_cetacproject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cetacproject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -377,6 +383,8 @@
 				09F9523B2717958C002FCCCD /* TanatTableViewController.swift */,
 				09697D75271C8F02006B326C /* ChartsViewController.swift */,
 				09C9CE20271E65D600E0F994 /* FiltroReportesViewController.swift */,
+				4DB06DAD271FF6D300ACDC46 /* VerSesionesTableViewController.swift */,
+				4DB06DB9272004C800ACDC46 /* VerLaSesionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -709,6 +717,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB06DAF271FF6D300ACDC46 /* VerSesionesTableViewController.swift in Sources */,
+				4DB06DBB272004C800ACDC46 /* VerLaSesionViewController.swift in Sources */,
 				0976C908271396AC009615DA /* ActualizacionBorradoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -729,6 +739,7 @@
 				0992BDBE271F308D009A86F5 /* UserController.swift in Sources */,
 				0992BDCA271F46A9009A86F5 /* EncuadreTwoViewController.swift in Sources */,
 				39F9045226E299CC0008FA80 /* QuienesSomosViewController.swift in Sources */,
+				4DB06DAE271FF6D300ACDC46 /* VerSesionesTableViewController.swift in Sources */,
 				39F9043226E28C650008FA80 /* ViewController.swift in Sources */,
 				0976066227036F9300E8378D /* PageViewController.swift in Sources */,
 				0922716C270F3E8A009A7AB7 /* UpdateInfoViewController.swift in Sources */,
@@ -748,6 +759,7 @@
 				0992BDC2271F3ECD009A86F5 /* AddUserViewController.swift in Sources */,
 				0992BDB7271F308D009A86F5 /* Session.swift in Sources */,
 				09E648DA271090790032E486 /* UserTableViewController.swift in Sources */,
+				4DB06DBA272004C800ACDC46 /* VerLaSesionViewController.swift in Sources */,
 				09697D76271C8F02006B326C /* ChartsViewController.swift in Sources */,
 				0992BDCB271F46A9009A86F5 /* SessionOneViewController.swift in Sources */,
 				09619B05270E9283004D0683 /* LoggedMenuViewController.swift in Sources */,
