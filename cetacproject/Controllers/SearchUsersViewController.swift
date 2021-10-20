@@ -7,17 +7,19 @@
 //
 
 import UIKit
-
+import Firebase
 class SearchUsersViewController: UIViewController {
     
+    let bd = Firestore.firestore()
     var nameFilterUser: String?
     var idFilterUser: String?
     var nameFilterSubAdmin: String?
     var idFilterSubAdmin: String?
     var nameFilterTanat: String?
     var idFilterTanat: String?
-
+    var typeAccount: Bool?
     @IBOutlet weak var nameTanat: UITextField!
+    @IBOutlet weak var agregarTan: UIButton!
     @IBOutlet weak var idTanat: UITextField!
     @IBOutlet weak var nameSubAdmin: UITextField!
     @IBOutlet weak var idSubAdmin: UITextField!
@@ -26,7 +28,27 @@ class SearchUsersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let path = Bundle.main.path(forResource: "id", ofType: "txt")
+        let url = URL(fileURLWithPath: path!)
+        
+        let string = try! NSString(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
+        let id = string.components(separatedBy: ":").last!.replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "}", with: "")
+        
+        bd.collection("Cuentas").document(id).getDocument(){ (document, error) in
+            if let document = document, document.exists {
+                let s = User(aDoc: document)
+                if (s.permisos != 3){
+                    if( self.agregarTan != nil){
+                        self.agregarTan.isEnabled = false
+                    }
+                }else{
+                    if( self.agregarTan != nil){
+                        self.agregarTan.isEnabled = true
+                    }
+                }
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
     

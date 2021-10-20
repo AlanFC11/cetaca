@@ -112,6 +112,7 @@ class EncuadreUpdateInfoViewController: UIViewController, UITextFieldDelegate {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
     func createAlertSuccess (title:String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
