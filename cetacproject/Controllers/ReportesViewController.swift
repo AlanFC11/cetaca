@@ -221,18 +221,122 @@ class ReportesViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         print(mostrarInicio)
         print(mostrarFinal)
     }
+    
+    @IBAction func motivos_(_ sender: UIButton) {
+        self.tipodeGraph = 3
+        self.typeOfChart = "despliegueMotivos"
+        let dia1 = Array(self.dias)[self.dia1Selec]
+        let dia2 = Array(self.meses)[self.mes1Selec].value
+        let dia3 = Array(self.anios)[self.anio1Selec].value
+        
+        self.fechaInicio_ = dia2 + "/" + dia1 + "/" + dia3
+        print(fechaInicio_)
+        let mes1 = Array(self.dias)[self.dia2Selec]
+        let mes2 = Array(self.meses)[self.mes2Selec].value
+        let mes3 = Array(self.anios)[self.anio2Selec].value
+        
+        self.fechaFinal_ = mes2 + "/" + mes1 + "/" + mes3
+        print(fechaFinal_)
+        let meses1 = Array(self.meses)[self.mes1Selec].key
+        let meses2 = Array(self.meses)[self.mes2Selec].key
+        let anios1 = Array(self.anios)[self.anio1Selec].key
+        let anios2 = Array(self.anios)[self.anio2Selec].key
+        
+        self.mostrarInicio = "Inicio: " + dia1 + "/" + meses1 + "/" + anios1
+        self.mostrarFinal = "Final: " + mes1 + "/" + meses2 + "/" + anios2
+        print(mostrarInicio)
+        print(mostrarFinal)
+        
+    }
+    
     @IBAction func CuotaGlobalChart(_ sender: Any) {
         typeOfChart = "CuotaGlobal"
+        let dia1 = Array(self.dias)[self.dia1Selec]
+        let dia2 = Array(self.meses)[self.mes1Selec].value
+        let dia3 = Array(self.anios)[self.anio1Selec].value
+        
+        self.fechaInicio_ = dia2 + "/" + dia1 + "/" + dia3
+        print(fechaInicio_)
+        let mes1 = Array(self.dias)[self.dia2Selec]
+        let mes2 = Array(self.meses)[self.mes2Selec].value
+        let mes3 = Array(self.anios)[self.anio2Selec].value
+        
+        self.fechaFinal_ = mes2 + "/" + mes1 + "/" + mes3
+        print(fechaFinal_)
+        let meses1 = Array(self.meses)[self.mes1Selec].key
+        let meses2 = Array(self.meses)[self.mes2Selec].key
+        let anios1 = Array(self.anios)[self.anio1Selec].key
+        let anios2 = Array(self.anios)[self.anio2Selec].key
+        
+        self.mostrarInicio = "Inicio: " + dia1 + "/" + meses1 + "/" + anios1
+        self.mostrarFinal = "Final: " + mes1 + "/" + meses2 + "/" + anios2
     }
     
     @IBAction func IntervencionesChart(_ sender: Any) {
         typeOfChart = "Intervenciones"
+        let dia1 = Array(self.dias)[self.dia1Selec]
+        let dia2 = Array(self.meses)[self.mes1Selec].value
+        let dia3 = Array(self.anios)[self.anio1Selec].value
+        
+        self.fechaInicio_ = dia2 + "/" + dia1 + "/" + dia3
+        print(fechaInicio_)
+        let mes1 = Array(self.dias)[self.dia2Selec]
+        let mes2 = Array(self.meses)[self.mes2Selec].value
+        let mes3 = Array(self.anios)[self.anio2Selec].value
+        
+        self.fechaFinal_ = mes2 + "/" + mes1 + "/" + mes3
+        print(fechaFinal_)
+        let meses1 = Array(self.meses)[self.mes1Selec].key
+        let meses2 = Array(self.meses)[self.mes2Selec].key
+        let anios1 = Array(self.anios)[self.anio1Selec].key
+        let anios2 = Array(self.anios)[self.anio2Selec].key
+        
+        self.mostrarInicio = "Inicio: " + dia1 + "/" + meses1 + "/" + anios1
+        self.mostrarFinal = "Final: " + mes1 + "/" + meses2 + "/" + anios2
     }
     @IBAction func ServiciosChart(_ sender: Any) {
         typeOfChart = "Servicios"
+        let dia1 = Array(self.dias)[self.dia1Selec]
+        let dia2 = Array(self.meses)[self.mes1Selec].value
+        let dia3 = Array(self.anios)[self.anio1Selec].value
+        
+        self.fechaInicio_ = dia2 + "/" + dia1 + "/" + dia3
+        print(fechaInicio_)
+        let mes1 = Array(self.dias)[self.dia2Selec]
+        let mes2 = Array(self.meses)[self.mes2Selec].value
+        let mes3 = Array(self.anios)[self.anio2Selec].value
+        
+        self.fechaFinal_ = mes2 + "/" + mes1 + "/" + mes3
+        print(fechaFinal_)
+        let meses1 = Array(self.meses)[self.mes1Selec].key
+        let meses2 = Array(self.meses)[self.mes2Selec].key
+        let anios1 = Array(self.anios)[self.anio1Selec].key
+        let anios2 = Array(self.anios)[self.anio2Selec].key
+        
+        self.mostrarInicio = "Inicio: " + dia1 + "/" + meses1 + "/" + anios1
+        self.mostrarFinal = "Final: " + mes1 + "/" + meses2 + "/" + anios2
     }
     @IBAction func CuotaTanatChart(_ sender: Any) {
         typeOfChart = "CuotaTanat"
+        let dia1 = Array(self.dias)[self.dia1Selec]
+        let dia2 = Array(self.meses)[self.mes1Selec].value
+        let dia3 = Array(self.anios)[self.anio1Selec].value
+        
+        self.fechaInicio_ = dia2 + "/" + dia1 + "/" + dia3
+        print(fechaInicio_)
+        let mes1 = Array(self.dias)[self.dia2Selec]
+        let mes2 = Array(self.meses)[self.mes2Selec].value
+        let mes3 = Array(self.anios)[self.anio2Selec].value
+        
+        self.fechaFinal_ = mes2 + "/" + mes1 + "/" + mes3
+        print(fechaFinal_)
+        let meses1 = Array(self.meses)[self.mes1Selec].key
+        let meses2 = Array(self.meses)[self.mes2Selec].key
+        let anios1 = Array(self.anios)[self.anio1Selec].key
+        let anios2 = Array(self.anios)[self.anio2Selec].key
+        
+        self.mostrarInicio = "Inicio: " + dia1 + "/" + meses1 + "/" + anios1
+        self.mostrarFinal = "Final: " + mes1 + "/" + meses2 + "/" + anios2
     }
 
     override func viewDidLoad() {

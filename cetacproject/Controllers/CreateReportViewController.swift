@@ -136,27 +136,53 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
                             }
                             print("Se agregaron las sesiones")
                             print(self.sesiones.count)
+                            self.obtenerUsuariosTanatologo()
                         }
                     }
-                    self.obtenerUsuariosTanatologo()
+                    
+                }
+            }
+        }else if (typeOfChart == "despliegueMotivos"){
+            pieChart.delegate = self
+            titulo.text = "Número de motivos"
+            vistaGrafica.addSubview(pieChart)
+            pieChart.center(in: vistaGrafica)
+            pieChart.width(to: vistaGrafica)
+            pieChart.heightToWidth(of: vistaGrafica)
+            
+            db.collection("Sesion").getDocuments(){ (QuerySnapshot, err) in
+                if let err = err {
+                    print("Error en base de datos")
+                } else {
+                    for document in QuerySnapshot!.documents{
+                        var s = Session(aDoc: document)
+                        self.sesiones.append(s)
+                    }
+                    print("Se agregaron las sesiones")
+                    print(self.sesiones.count)
+                    self.obtenerMotivos()
                 }
             }
         }else if typeOfChart == "CuotaGlobal"{
+            titulo.text = "Cuota global"
             chartView.addSubview(cuotaGChart)
             cuotaGChart.center(in: chartView)
             cuotaGChart.width(to: chartView)
             cuotaGChart.heightToWidth(of: chartView)
         }else if typeOfChart == "CuotaTanat"{
+            titulo.text = "Cuota por tanatólogo"
             chartView.addSubview(cuotaTanatChart) //agrega la gráfica a la vista
             cuotaTanatChart.center(in: chartView) //centra la gráfica en la vista
             cuotaTanatChart.width(to: chartView) //define el ancho de la gráfica
             cuotaTanatChart.heightToWidth(of: chartView) //definel el alto de la gráfica
         }else if typeOfChart == "Servicios"{
+            titulo.text = "Número de servicios"
             chartView.addSubview(pieChartServicios) //agrega la gráfica a la vista
             pieChartServicios.center(in: chartView) //centra la gráfica en la vista
             pieChartServicios.width(to: chartView) //define el ancho de la gráfica
             pieChartServicios.heightToWidth(of: chartView) //definel el alto de la gráfica
         }else if typeOfChart == "Intervenciones"{
+            titulo.text = "Número de intervenciones"
             chartView.addSubview(barChart) //agrega la gráfica a la vista
             barChart.center(in: chartView) //centra la gráfica en la vista
             barChart.width(to: chartView) //define el ancho de la gráfica
@@ -166,7 +192,50 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         
                 
     }
-
+    
+    func obtenerMotivos (){
+        var motivos_ = [String: Int]()
+        var encontrados = [String]()
+        print("entro a la funcion")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yy"
+        let inicio_ = dateFormatter.date(from: self.fechaInicio!)
+        let final_ = dateFormatter.date(from: self.fechaFinal!)
+        print("se declararon las fechas")
+        
+        for sesion in self.sesiones{
+            var inter_ = dateFormatter.date(from: sesion.fecha)
+            if(inter_! >= inicio_! && inter_! <= final_!){
+                if(encontrados.contains(sesion.motivo)){
+                    motivos_.updateValue(motivos_[sesion.motivo]!+1, forKey: sesion.motivo)
+                }else{
+                    motivos_[sesion.motivo] = 1
+                    encontrados.append(sesion.motivo)
+                }
+            }
+        }
+        
+        var entradas = [PieChartDataEntry]()
+        for (key,value) in motivos_{
+            var punto1 = PieChartDataEntry(value: Double(value), label: key)
+            entradas.append(punto1)
+        }
+        var colores = [UIColor]()
+        colores.append(contentsOf: ChartColorTemplates.pastel())
+        colores.append(contentsOf: ChartColorTemplates.material())
+        let dataSet = PieChartDataSet(entries: entradas, label: "")
+        dataSet.colors = colores
+        let data = PieChartData(dataSet: dataSet)
+        self.pieChart.data = data
+        self.pieChart.legend.wordWrapEnabled = true
+        self.pieChart.drawEntryLabelsEnabled = false
+        self.pieChart.entryLabelColor = UIColor.black
+        
+        
+        self.pieChart.notifyDataSetChanged()
+        
+    }
     
     func obtenerUsuariosTanatologo(){
         var tant = [String: Int]()
@@ -182,7 +251,7 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         for (key,value) in self.tanatologos{
             tant[value.nombre] = 0
         }
-        
+        print("Aqui va el diccionario del tanatologo: ",tant.count)
         for sesion in self.sesiones{
             print("entro al for")
             print(sesion.fecha)
@@ -207,8 +276,10 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         dataSet.colors = ChartColorTemplates.pastel()
         let data = PieChartData(dataSet: dataSet)
         self.pieChart.data = data
-
+        self.pieChart.legend.textColor = UIColor.black
+        self.pieChart.drawEntryLabelsEnabled = false
         self.pieChart.notifyDataSetChanged()
+        
     }
     
     func obtenerUsuarios()
@@ -272,12 +343,28 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
     }
     func pieChartUpdate (with sesiones: Sesiones) {//future home of pie chart code
         if typeOfChart == "Servicios"{
-            
-        let entry1 = PieChartDataEntry(value: Double(sesiones.filter{$0.servicio == "Acompañamiento"}.count), label: "Acompañamiento")
-        let entry2 = PieChartDataEntry(value: Double(sesiones.filter{$0.servicio == "Holístico"}.count), label: "Holísticos")
-        let entry3 = PieChartDataEntry(value: Double(sesiones.filter{$0.servicio == "Alternativas"}.count), label: "Alternativas")
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yy"
+            let inicio_ = dateFormatter.date(from: self.fechaInicio!)
+            let final_ = dateFormatter.date(from: self.fechaFinal!)
+            var filteredByDate = [Sesion]()
+            for sesion in sesiones{
+                print("entro al for")
+                print(sesion.fecha)
+                var inter_ = dateFormatter.date(from: sesion.fecha)
+                print(type(of: inter_))
+                
+                if(inter_! >= inicio_! && inter_! <= final_!){
+                    filteredByDate.append(sesion)
+                }else{
+                    print("ninguno cumple")
+                }
+            }
+        let entry1 = PieChartDataEntry(value: Double(filteredByDate.filter{$0.servicio == "Acompañamiento"}.count), label: "Acompañamiento")
+        let entry2 = PieChartDataEntry(value: Double(filteredByDate.filter{$0.servicio == "Holístico"}.count), label: "Holísticos")
+        let entry3 = PieChartDataEntry(value: Double(filteredByDate.filter{$0.servicio == "Alternativas"}.count), label: "Alternativas")
         let dataSet = PieChartDataSet(entries: [entry1, entry2, entry3], label: "# tipo de servicio utilizado")
-        dataSet.colors = ChartColorTemplates.joyful()
+        dataSet.colors = ChartColorTemplates.pastel()
         let data = PieChartData(dataSet: dataSet)
         pieChartServicios.data = data
         pieChartServicios.chartDescription?.text = ""
@@ -287,20 +374,36 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         pieChartServicios.notifyDataSetChanged()
             
     }else if typeOfChart == "Intervenciones"{
-        
-        let entry1bar = BarChartDataEntry(x: 1, y: Double(sesiones.filter{$0.intervencion == "Tanatología"}.count))
-        let entry2bar = BarChartDataEntry(x: 2, y:  Double(sesiones.filter{$0.intervencion == "Acompañamiento individual"}.count))
-        let entry3bar = BarChartDataEntry(x: 3, y:  Double(sesiones.filter{$0.intervencion == "Acompañamiento grupal"}.count))
-        let entry4bar = BarChartDataEntry(x: 4, y:  Double(sesiones.filter{$0.intervencion == "Logoterapia"}.count))
-        let entry5bar = BarChartDataEntry(x: 5, y:  Double(sesiones.filter{$0.intervencion == "Mindfulness"}.count))
-        let entry6bar = BarChartDataEntry(x: 6, y:  Double(sesiones.filter{$0.intervencion == "Aromaterapia y musicoterapia"}.count))
-        let entry7bar = BarChartDataEntry(x: 7, y:  Double(sesiones.filter{$0.intervencion == "Cristaloterapia"}.count))
-        let entry8bar = BarChartDataEntry(x: 8, y:  Double(sesiones.filter{$0.intervencion == "Reiki"}.count))
-        let entry9bar = BarChartDataEntry(x: 9, y: Double(sesiones.filter{$0.intervencion == "Biomagnetismo"}.count))
-        let entry10bar = BarChartDataEntry(x: 10, y:  Double(sesiones.filter{$0.intervencion == "Angeloterapia"}.count))
-        let entry11bar = BarChartDataEntry(x: 11, y:  Double(sesiones.filter{$0.intervencion == "Cama térmica de Jade"}.count))
-        let entry12bar = BarChartDataEntry(x: 12, y:  Double(sesiones.filter{$0.intervencion == "Flores de Bach"}.count))
-        let entry13bar = BarChartDataEntry(x: 13, y:  Double(sesiones.filter{$0.intervencion == "Brisas ambientales"}.count))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yy"
+        let inicio_ = dateFormatter.date(from: self.fechaInicio!)
+        let final_ = dateFormatter.date(from: self.fechaFinal!)
+        var filteredByDate = [Sesion]()
+        for sesion in sesiones{
+            print("entro al for")
+            print(sesion.fecha)
+            var inter_ = dateFormatter.date(from: sesion.fecha)
+            print(type(of: inter_))
+            
+            if(inter_! >= inicio_! && inter_! <= final_!){
+                filteredByDate.append(sesion)
+            }else{
+                print("ninguno cumple")
+            }
+        }
+        let entry1bar = BarChartDataEntry(x: 1, y: Double(filteredByDate.filter{$0.intervencion == "Tanatología"}.count))
+        let entry2bar = BarChartDataEntry(x: 2, y:  Double(filteredByDate.filter{$0.intervencion == "Acompañamiento individual"}.count))
+        let entry3bar = BarChartDataEntry(x: 3, y:  Double(filteredByDate.filter{$0.intervencion == "Acompañamiento grupal"}.count))
+        let entry4bar = BarChartDataEntry(x: 4, y:  Double(filteredByDate.filter{$0.intervencion == "Logoterapia"}.count))
+        let entry5bar = BarChartDataEntry(x: 5, y:  Double(filteredByDate.filter{$0.intervencion == "Mindfulness"}.count))
+        let entry6bar = BarChartDataEntry(x: 6, y:  Double(filteredByDate.filter{$0.intervencion == "Aromaterapia y musicoterapia"}.count))
+        let entry7bar = BarChartDataEntry(x: 7, y:  Double(filteredByDate.filter{$0.intervencion == "Cristaloterapia"}.count))
+        let entry8bar = BarChartDataEntry(x: 8, y:  Double(filteredByDate.filter{$0.intervencion == "Reiki"}.count))
+        let entry9bar = BarChartDataEntry(x: 9, y: Double(filteredByDate.filter{$0.intervencion == "Biomagnetismo"}.count))
+        let entry10bar = BarChartDataEntry(x: 10, y:  Double(filteredByDate.filter{$0.intervencion == "Angeloterapia"}.count))
+        let entry11bar = BarChartDataEntry(x: 11, y:  Double(filteredByDate.filter{$0.intervencion == "Cama térmica de Jade"}.count))
+        let entry12bar = BarChartDataEntry(x: 12, y:  Double(filteredByDate.filter{$0.intervencion == "Flores de Bach"}.count))
+        let entry13bar = BarChartDataEntry(x: 13, y:  Double(filteredByDate.filter{$0.intervencion == "Brisas ambientales"}.count))
         var arreglo = [BarChartDataEntry]()
         arreglo.append(entry1bar)
         arreglo.append(entry2bar)
@@ -329,49 +432,89 @@ class CreateReportViewController: UIViewController, ChartViewDelegate {
         
     }
         else if typeOfChart == "CuotaGlobal"{
-            
-        let allYears = sesiones.map{$0.fecha.components(separatedBy: "/")[2]}
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yy"
+            let inicio_ = dateFormatter.date(from: self.fechaInicio!)
+            let final_ = dateFormatter.date(from: self.fechaFinal!)
+            var filteredByDate = [Sesion]()
+            for sesion in sesiones{
+                print("entro al for")
+                print(sesion.fecha)
+                var inter_ = dateFormatter.date(from: sesion.fecha)
+                print(type(of: inter_))
+                
+                if(inter_! >= inicio_! && inter_! <= final_!){
+                    filteredByDate.append(sesion)
+                }else{
+                    print("ninguno cumple")
+                }
+            }
+        let allYears = filteredByDate.map{$0.fecha.components(separatedBy: "/")[2]}
+            print(allYears)
         let uniqueYears: Set<String> = Set(allYears)
         let uYears = Array(uniqueYears)
         var entriesPerYear = [ChartDataEntry]()
         for i in uniqueYears{  // hacer la suma de cada año
             var sum = 0
-            let oneYearResults = sesiones.filter{$0.fecha.components(separatedBy: "/")[2] == i}
+            let oneYearResults = filteredByDate.filter{$0.fecha.components(separatedBy: "/")[2] == i}
             for o in oneYearResults{
                 sum += o.cuota
             }
-            let entry = ChartDataEntry(x: Double(i) ?? 0, y: Double(sum))
+            let entry = PieChartDataEntry(value: Double(sum), label: i)
             entriesPerYear.append(entry)
         }
-        let dataSetGlobalCuota = LineChartDataSet(entries: entriesPerYear, label: "Cuota de recuperación global| Valor en y: Pesos MXN | Valor en x: Año")
+        let dataSetGlobalCuota = PieChartDataSet(entries: entriesPerYear, label: "Cuota de recuperación global| Pesos MXN | Año")
         dataSetGlobalCuota.colors = ChartColorTemplates.pastel()
-        let dataGlobalCuota = LineChartData(dataSet: dataSetGlobalCuota)
+        let dataGlobalCuota = PieChartData(dataSet: dataSetGlobalCuota)
         cuotaGChart.data = dataGlobalCuota
-        cuotaTanatChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: uYears)
+            cuotaGChart.legend.textColor = .black
         cuotaGChart.notifyDataSetChanged()
         }
         
         else if typeOfChart == "CuotaTanat"{
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yy"
+            var filteredByDate = [Sesion]()
+            print(fechaInicio)
+            print("aaa")
+            print(fechaFinal)
+            if self.fechaInicio != nil && self.fechaFinal != nil{
+            let inicio_ = dateFormatter.date(from: self.fechaInicio!)
+            let final_ = dateFormatter.date(from: self.fechaFinal!)
             
-        let allTanats = sesiones.map{$0.idTanatologo}
+            for sesion in sesiones{
+                print("entro al for")
+                print(sesion.fecha)
+                var inter_ = dateFormatter.date(from: sesion.fecha)
+                print(type(of: inter_))
+                
+                if(inter_! >= inicio_! && inter_! <= final_!){
+                    filteredByDate.append(sesion)
+                }else{
+                    print("ninguno cumple")
+                }
+            }
+            }
+        let allTanats = filteredByDate.map{$0.idTanatologo}
+            print(allTanats)
         let uniqueTanats: Set<String> = Set(allTanats)
         let uTanats = Array(uniqueTanats)
         print(uTanats)
         var entriesPerTanat = [ChartDataEntry]()
         for i in uniqueTanats{  // hacer la suma de cada año
             var sum = 0
-            let oneTanatResults = sesiones.filter{$0.idTanatologo == i}
+            let oneTanatResults = filteredByDate.filter{$0.idTanatologo == i}
             for o in oneTanatResults{
                 sum += o.cuota
             }
-            let entry = ChartDataEntry(x: Double(i) ?? 0, y: Double(sum))
+            let entry = PieChartDataEntry(value: Double(sum), label: i)
             entriesPerTanat.append(entry)
         }
-        let dataSetTanatCuota = LineChartDataSet(entries: entriesPerTanat, label: "Cuota de recuperación por tanatólogo")
+        let dataSetTanatCuota = PieChartDataSet(entries: entriesPerTanat, label: "Cuota de recuperación por tanatólogo")
         dataSetTanatCuota.colors = ChartColorTemplates.pastel()
-        let dataTanatCuota = LineChartData(dataSet: dataSetTanatCuota)
+        let dataTanatCuota = PieChartData(dataSet: dataSetTanatCuota)
         cuotaTanatChart.data = dataTanatCuota
-        cuotaTanatChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: uTanats)
+            cuotaGChart.legend.textColor = .black
         cuotaTanatChart.notifyDataSetChanged()
         }
     }

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class EncuadreUpdateInfoViewController: UIViewController {
+class EncuadreUpdateInfoViewController: UIViewController, UITextFieldDelegate {
     var database = Login()
     var user:LoginInfo?
     
@@ -29,6 +29,25 @@ class EncuadreUpdateInfoViewController: UIViewController {
     @IBOutlet weak var confirm: UISwitch!
     
     
+    @IBOutlet weak var scrollview: UIScrollView!
+    
+    @IBAction func hidekey(_ sender: UITapGestureRecognizer) {
+        super.viewDidLoad()
+        ocupacion.resignFirstResponder()
+        religion.resignFirstResponder()
+        procedencia.resignFirstResponder()
+        domicilio.resignFirstResponder()
+        telefono.resignFirstResponder()
+        celular.resignFirstResponder()
+        sexo.resignFirstResponder()
+        edad.resignFirstResponder()
+        estadoCivil.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    
     @IBAction func updateEncuadre(_ sender: Any) {
         if confirm.isOn {
             self.database.updateEncuadre(id: user?.id ?? "", ocupacion: user?.ocupacion ?? "", religion: user?.religion ?? "", procedencia: user?.procedencia ?? "", domicilio: user?.domicilio ?? "", telefono: user?.telefono_casa ?? "", sexo: user?.sexo ?? "", edad: user?.edad ?? 0, estadoCivil: user?.estado_civil ?? "", celular: user?.celular ?? "")
@@ -37,9 +56,42 @@ class EncuadreUpdateInfoViewController: UIViewController {
             self.createAlert(title: "Advertencia", message: "Confirma que desea actualizar los datos")
         }
     }
+    
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWasShown(_ notification: NSNotification) {
+        guard let info = notification.userInfo,
+            let keyboardFrameValue = info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue else { return }
+
+        let keyboardFrame = keyboardFrameValue.cgRectValue
+        let keyboardSize = keyboardFrame.size
+
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height+100, right: 0.0)
+        scrollview.contentInset = contentInsets
+    }
+
+    @objc func keyboardWillBeHidden(_ notification: NSNotification) {
+        let contentInsets = UIEdgeInsets.zero
+        scrollview.contentInset = contentInsets
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ocupacion.delegate = self
+        religion.delegate = self
+        procedencia.delegate = self
+        domicilio.delegate = self
+        telefono.delegate = self
+        celular.delegate = self
+        sexo.delegate = self
+        edad.delegate = self
+        estadoCivil.delegate = self
+        registerForKeyboardNotifications()
+        
         nombre.text = user?.nombre
         id.text = user?.id
         ocupacion.text = user?.ocupacion

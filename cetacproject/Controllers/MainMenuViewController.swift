@@ -9,8 +9,15 @@ import SideMenu
 import UIKit
 import Firebase
 
-class MainMenuViewController: UIViewController{
+class MainMenuViewController: UIViewController, UITextFieldDelegate{
     
+    @IBAction func hideKeyboard(_ sender: UITapGestureRecognizer) {
+        TxtFieldPassword.resignFirstResponder()
+        TxtFieldEmail.resignFirstResponder()
+    }
+    
+    @IBOutlet weak var TxtFieldEmail: UITextField!
+    @IBOutlet weak var TxtFieldPassword: UITextField!
     var database = Login()
     var datos = [Cuentas]()
 
@@ -18,6 +25,11 @@ class MainMenuViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (TxtFieldPassword != nil && TxtFieldEmail != nil){
+            TxtFieldEmail.delegate = self
+            TxtFieldPassword.delegate = self
+        }
+        
         menu = SideMenuNavigationController(rootViewController: MenuListController())
         menu?.leftSide = true
         menu?.setNavigationBarHidden(true, animated: false)
@@ -25,12 +37,14 @@ class MainMenuViewController: UIViewController{
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    
     @IBAction func didTapMenu(){
         present(menu!, animated: true)
     }
     
-    @IBOutlet weak var TxtFieldEmail: UITextField!
-    @IBOutlet weak var TxtFieldPassword: UITextField!
     @IBAction func login(){
         database.login(mail: (self.TxtFieldEmail.text)!){ (result) in
             switch result{
@@ -157,5 +171,7 @@ class MenuListController: UITableViewController{
        
         
     }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
 }
